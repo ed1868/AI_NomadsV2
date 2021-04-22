@@ -58,6 +58,7 @@ class Header extends Component{
                             <ul className="mainmenu">
                                 <li className="has-droupdown"><Link to="#">Home</Link>
                                     <ul className="submenu">
+                                        <li><a href="https://github.com/ed1868">GitHub</a></li>
                                         <li><Link to="/main-demo">Main Demo</Link></li>
                                         <li><Link to="/dark-main-demo">Main Demo Dark</Link></li>
                                         <li><Link to="/personal-portfolio">Personal Portfolio</Link></li>
