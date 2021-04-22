@@ -192,15 +192,15 @@ class HomePortfolio extends Component {
                         <div className="row row--35 align-items-center">
                             <div className="col-lg-6 col-md-6 col-12">
                                 <div className="thumbnail">
-                                    <img className="w-100" src="/assets/images/about/about-4.png" alt="About Images" />
+                                    <img className="w-100" src="/assets/images/about/team.jpeg" alt="About Images" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-12 mt_sm--30">
                                 <div className="progress-content-here">
                                     <div className="section-title text-left">
-                                        <span className="subtitle">Our Skill</span>
-                                        <h2 className="title">Agency Skill</h2>
-                                        <p className="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.</p>
+                                        <span className="subtitle">Our Squad</span>
+                                        <h2 className="title">Agency Skill Levels</h2>
+                                        <p className="description">Our Miami Team continuous to achieve excellence.</p>
                                     </div>
                                     <ProgressOne ProgressStyle="progress-bar--3" />
                                 </div>
