@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useEffect } from "react";
 import ScrollToTop from 'react-scroll-up';
 import PortfolioMasonry from "../elements/portfolio/PortfolioMasonry";
 import Header from "../component/header/Header";
@@ -110,6 +110,7 @@ class HomePortfolio extends Component {
         this.setState({ isOpen: true })
     }
     render() {
+
         return (
             <div className="active-dark bg_color--10">
                 <Helmet pageTitle="Home Portfolio" />
