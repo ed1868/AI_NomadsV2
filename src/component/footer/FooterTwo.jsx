@@ -16,8 +16,8 @@ const FooterTwo = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="inner">
                             <div className="logo text-center text-sm-left mb_sm--20">
-                                <a href="/home-one">
-                                    <img src="/assets/images/logo/logo-light.png" alt="Logo images"/>
+                                <a href="/home-one" className="title theme-gradient">
+                                    AI Nomads
                                 </a>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ const FooterTwo = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
                             <div className="text">
-                                <p>Copyright © 2021 Rainbow-Themes. All Rights Reserved.</p>
+                                <p>Copyright © 2021 AI Nomads. All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
