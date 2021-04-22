@@ -1,5 +1,8 @@
 ## Curated Website for AI Nomads and steping stone for NFT Marketplace
 
+Open [https://ainomads.netlify.app](https://ainomads.netlify.app) to view Demo.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
