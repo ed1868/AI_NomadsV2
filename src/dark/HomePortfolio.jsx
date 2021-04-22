@@ -157,9 +157,10 @@ class HomePortfolio extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-center mb--30">
-                                    <span className="subtitle">My complete project</span>
-                                    <h2 className="title">Our Project</h2>
-                                    <p className="description">There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p>
+                                    <span className="subtitle">Artificial Intelligence Nomads</span>
+                                    <br></br>
+                                    <h2 className="title theme-gradient">Building a future you can trust</h2>
+                                    <p className="description">Artificial Intelligence is inevitable, our goal is to ensure the future of AI is ethically safe<br /> by solving business problems with the values and intergrity we deserve.</p>
                                 </div>
                             </div>
                         </div>

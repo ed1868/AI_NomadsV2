@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-const Portfolio_image = <img src="/assets/images/portfolio/portfolio-static-01.jpg" alt="React Creative Agency" />;
-const Portfolio_image2 = <img src="/assets/images/portfolio/portfolio-static-02.jpg" alt="React Creative Agency" />;
-const Portfolio_image3 = <img src="/assets/images/portfolio/portfolio-static-03.jpg" alt="React Creative Agency" />;
-const Portfolio_image4 = <img src="/assets/images/portfolio/portfolio-static-04.jpg" alt="React Creative Agency" />;
-const Portfolio_image5 = <img src="/assets/images/portfolio/portfolio-static-05.jpg" alt="React Creative Agency" />;
-const Portfolio_image6 = <img src="/assets/images/portfolio/portfolio-static-06.jpg" alt="React Creative Agency" />;
-const Portfolio_image7 = <img src="/assets/images/portfolio/portfolio-static-07.jpg" alt="React Creative Agency" />;
-const Portfolio_image8 = <img src="/assets/images/portfolio/portfolio-static-08.jpg" alt="React Creative Agency" />;
-const Portfolio_image9 = <img src="/assets/images/portfolio/portfolio-static-09.jpg" alt="React Creative Agency" />;
-const Portfolio_image10 = <img src="/assets/images/portfolio/portfolio-static-01.jpg" alt="React Creative Agency" />;
-const Portfolio_image11 = <img src="/assets/images/portfolio/portfolio-static-08.jpg" alt="React Creative Agency" />;
-const Portfolio_image12 = <img src="/assets/images/portfolio/portfolio-static-05.jpg" alt="React Creative Agency" />;
+const Portfolio_image = <img src="/assets/images/portfolio/a1.jpeg" alt="AI Nomads" />;
+const Portfolio_image2 = <img src="/assets/images/portfolio/a2.jpeg" alt="AI Nomads" />;
+const Portfolio_image3 = <img src="/assets/images/portfolio/a3.jpeg" alt="AI Nomads" />;
+const Portfolio_image4 = <img src="/assets/images/portfolio/a4.jpeg" alt="AI Nomads" />;
+// const Portfolio_image5 = <img src="/assets/images/portfolio/portfolio-static-05.jpg" alt="React Creative Agency" />;
+// const Portfolio_image6 = <img src="/assets/images/portfolio/portfolio-static-06.jpg" alt="React Creative Agency" />;
+// const Portfolio_image7 = <img src="/assets/images/portfolio/portfolio-static-07.jpg" alt="React Creative Agency" />;
+// const Portfolio_image8 = <img src="/assets/images/portfolio/portfolio-static-08.jpg" alt="React Creative Agency" />;
+// const Portfolio_image9 = <img src="/assets/images/portfolio/portfolio-static-09.jpg" alt="React Creative Agency" />;
+// const Portfolio_image10 = <img src="/assets/images/portfolio/portfolio-static-01.jpg" alt="React Creative Agency" />;
+// const Portfolio_image11 = <img src="/assets/images/portfolio/portfolio-static-08.jpg" alt="React Creative Agency" />;
+// const Portfolio_image12 = <img src="/assets/images/portfolio/portfolio-static-05.jpg" alt="React Creative Agency" />;
 
 
 
@@ -20,74 +20,74 @@ const PortfolioList = [
         image: Portfolio_image,
         category: 'Development',
         title: 'Web Design',
-        description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
+        description: 'Building a bridge between one’s dreams and web development.'
     },
     {
         image: Portfolio_image2,
         category: 'Product Design',
         title: 'App Development',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+        description: 'IOS and Android App development.'
     },
     {
         image: Portfolio_image3,
         category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+        title: 'UX/UI Design',
+        description: 'Extensive research and impeccable User Interfaces.'
     },
     {
         image: Portfolio_image4,
         category: 'Application',
         title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image5,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image6,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image7,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image8,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image9,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image10,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image11,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
-    {
-        image: Portfolio_image12,
-        category: 'Application',
-        title: 'Photoshop Design',
-        description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
-    },
+        description: 'Graphic Designers ready to bring your ideas to life.'
+    }
+    // {
+    //     image: Portfolio_image5,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image6,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image7,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image8,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image9,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image10,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image11,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
+    // {
+    //     image: Portfolio_image12,
+    //     category: 'Application',
+    //     title: 'Photoshop Design',
+    //     description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.'
+    // },
 ]
 
 
