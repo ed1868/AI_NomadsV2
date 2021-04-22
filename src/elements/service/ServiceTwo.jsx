@@ -5,39 +5,39 @@ const ServiceList = [
     {
         icon: <FiCast />,
         title: 'Business Stratagy',
-        description: 'Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut.'
+        description: 'Have an idea? Let us scale it for you. From start to market, we will have a plan ready to ensure success.'
     },
     {
         icon: <FiLayers />,
         title: 'Website Development',
-        description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
+        description: 'We write clean code and test cases to ensure optimum performance. We meet deadlines with quality work.'
     },
     {
         icon: <FiUsers />,
         title: 'Marketing & Reporting',
-        description: 'Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut.'
+        description: 'Marketing campaigns ensure your app or website has the reach it deserves. Growing monthly and to the moon!'
     },
     {
         icon: <FiMonitor />,
         title: 'Mobile Development',
-        description: 'Desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+        description: 'We provide engineers and curated plans to launch any IOS or Android Apps to Google or Apple app store.'
     },
     {
         icon: <FiMail />,
         title: 'Email Marketing',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in.'
+        description: 'With Artificial Intelligence, email campaigns are seamless and ensure engaged users and real-time analytics.'
     },
     {
         icon: <FiCopy />,
         title: 'Copywriting',
-        description: 'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for.'
+        description: 'Let our writers tell the story. Ensure your integrity and pay attention to detail that is often overlooked.'
     },
 ]
 
 class ServiceTwo extends Component{
     render(){
-        let title = 'Services provide for you.',
-        description = 'There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.',
+        let title = 'Services provided for you.',
+        description = 'You have a problem? Our engineers are standing by ready to lend a helping hand.',
         subtitle= 'What we can do for you';
         return(
             <React.Fragment>
@@ -46,7 +46,8 @@ class ServiceTwo extends Component{
                         <div className="col-lg-12">
                             <div className="section-title text-center">
                                 <span className="subtitle">{subtitle}</span>
-                                <h2 className="title">{title}</h2>
+                                <br></br>
+                                <h2 className="title theme-gradient">{title}</h2>
                                 <p className="description" dangerouslySetInnerHTML={{ __html: description }}></p>
                             </div>
                         </div>
