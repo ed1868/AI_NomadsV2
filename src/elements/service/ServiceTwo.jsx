@@ -58,7 +58,8 @@ class ServiceTwo extends Component{
                             <div className="row service-main-wrapper">
                                 {ServiceList.map( (val , i) => (
                                     <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
-                                        <a href="/service-details">
+                                        {/* <a href="/service-details"> */}
+                                        <a href="/">
                                             <div className="service service__style--2 text-left">
                                                 <div className="icon">
                                                     {val.icon}

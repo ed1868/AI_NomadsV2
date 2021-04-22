@@ -48,8 +48,9 @@ class Header extends Component{
                 <div className="header-wrapper" id="header-wrapper">
                     <div className="header-left">
                         <div className="logo">
-                            <a href="/">
-                                {logoUrl}
+                            <a href="/" className="title theme-gradient">
+                                {/* {logoUrl} */}
+                                AI Nomads
                             </a>
                         </div>
                     </div>
@@ -59,7 +60,7 @@ class Header extends Component{
                                 <li className="has-droupdown"><Link to="#">Home</Link>
                                     <ul className="submenu">
                                         <li><a href="https://github.com/ed1868">GitHub</a></li>
-                                        <li><Link to="/main-demo">Main Demo</Link></li>
+                                        {/* <li><Link to="/main-demo">Main Demo</Link></li>
                                         <li><Link to="/dark-main-demo">Main Demo Dark</Link></li>
                                         <li><Link to="/personal-portfolio">Personal Portfolio</Link></li>
                                         <li><Link to="/interior-landing">Interior Landing</Link></li>
@@ -75,18 +76,18 @@ class Header extends Component{
                                         <li><Link to="/home-particles">Home Particles</Link></li>
                                         <li><Link to="/studio-agency">Studio Agency</Link></li>
                                         <li><Link to="/startup">Startup</Link></li>
-                                        <li><Link to="/creative-portfolio">Creative Portfolio</Link></li>
+                                        <li><Link to="/creative-portfolio">Creative Portfolio</Link></li> */}
                                     </ul>
                                 </li>
-                                <li className="has-droupdown"><Link to="/service" >Service</Link>
+                                {/* <li className="has-droupdown"><Link to="/service" >Service</Link>
                                     <ul className="submenu">
                                         <li><Link to="/service">Service</Link></li>
                                         <li><Link to="/service-details">Service Details</Link></li>
                                     </ul>
-                                </li>
-                                <li><Link to="/about" >About</Link></li>
+                                </li> */}
+                                {/* <li><Link to="/about" >About</Link></li> */}
 
-                                <li className="has-droupdown"><Link to="#pages" >Pages</Link>
+                                {/* <li className="has-droupdown"><Link to="#pages" >Pages</Link>
                                     <ul className="submenu">
                                         <li><Link to="/blog">Blog List</Link></li>
                                         <li><Link to="/blog-details">Blog Details</Link></li>
@@ -96,8 +97,8 @@ class Header extends Component{
                                         <li><Link to="/portfolio-details">Portfolio Details</Link></li>
                                         <li><Link to="/404">404</Link></li>
                                     </ul>
-                                </li>
-                                <li className="has-droupdown"><Link to="#" >Blocks</Link>
+                                </li> */}
+                                {/* <li className="has-droupdown"><Link to="#" >Blocks</Link>
                                     <ul className="submenu">
                                         <li><Link to="/button">Button</Link></li>
                                         <li><Link to="/portfolio">Portfolio</Link></li>
@@ -114,13 +115,13 @@ class Header extends Component{
                                         <li><Link to="/columns">Columns</Link></li>
                                         <li><Link to="/pricing-table">Pricing Table</Link></li>
                                     </ul>
-                                </li>
-                                <li><Link to="/contact" >Contact</Link></li>
+                                </li> */}
+                                {/* <li><Link to="/contact" >Contact</Link></li> */}
                             </ul>
                         </nav>
                         <div className="header-btn">
-                            <a className="btn-default btn-border btn-opacity" target="_blank" href="https://themeforest.net/checkout/from_item/31405042?license=regular">
-                                <span>Buy Now</span>
+                            <a className="btn-default btn-border btn-opacity" target="_blank" href="https://www.instagram.com">
+                                <span>Get Quote</span>
                             </a>
                         </div>
                         {/* Start Humberger Menu  */}

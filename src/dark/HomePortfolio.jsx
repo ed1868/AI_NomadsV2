@@ -123,7 +123,7 @@ class HomePortfolio extends Component {
                             params={{
                                 "particles": {
                                     "number": {
-                                        "value": 100
+                                        "value": 150
                                     },
                                     "size": {
                                         "value": 3
@@ -150,7 +150,8 @@ class HomePortfolio extends Component {
                                                 {value.category ? <span>{value.category}</span> : ''}
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
-                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
+                                                {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
+                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="#">Contact Us</a></div> : ''}
                                             </div>
                                         </div>
                                     </div>

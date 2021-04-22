@@ -102,25 +102,31 @@ class PortfolioMasonry extends Component{
                         <div className="im_portfolio">
                             <div className="thumbnail_inner">
                                 <div className="thumbnail">
-                                    <Link to="/portfolio-details">
+                                    <Link to="#">
                                         {value.image}
                                     </Link>    
+                                    {/* <Link to="/portfolio-details">
+                                        {value.image}
+                                    </Link>     */}
                                 </div>
                             </div>
                             <div className="content">
                                 <div className="inner">
                                     <div className="portfolio_heading">
                                         <div className="category_list">
-                                            <Link to="/portfolio-details">{value.category}</Link>
+                                            <Link to="/#">{value.category}</Link>
+                                            {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                         </div>
-                                        <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4>
+                                        <h4 className="title"><Link to="/#">{value.title}</Link></h4>
+                                        {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                     </div>
                                     <div className="portfolio_hover">
                                         <p>{value.description}</p>
                                     </div>
                                 </div>
                             </div>
-                            <Link className="transparent_link" to="/portfolio-details"></Link>
+                            <Link className="transparent_link" to="/#"></Link>
+                            {/* <Link className="transparent_link" to="/portfolio-details"></Link> */}
                         </div>
                     </div>
                 ))}
