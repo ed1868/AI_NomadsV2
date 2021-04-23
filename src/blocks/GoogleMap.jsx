@@ -43,6 +43,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            // bootstrapURLKeys={{key: API KEY GOES HERE}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
