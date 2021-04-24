@@ -7,6 +7,8 @@ import ScrollToTop from 'react-scroll-up';
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 
+
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class GoogleMap extends Component {
@@ -43,7 +45,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
-                                            // bootstrapURLKeys={{key: API KEY GOES HERE}}
+                                            bootstrapURLKeys={{key: "AIzaSyB6e-Xl9tCrnTPWnZ7fo9nyAwu55cWdXcY"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -62,6 +64,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            bootstrapURLKeys={{key: "AIzaSyB6e-Xl9tCrnTPWnZ7fo9nyAwu55cWdXcY"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -89,6 +92,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            bootstrapURLKeys={{key: "AIzaSyB6e-Xl9tCrnTPWnZ7fo9nyAwu55cWdXcY"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -108,6 +112,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            bootstrapURLKeys={{key: "AIzaSyDtnA-1Tp9ZCWipHv8tAfO8ZGnfIdY-Iog"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -127,6 +132,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            bootstrapURLKeys={{key: "AIzaSyDtnA-1Tp9ZCWipHv8tAfO8ZGnfIdY-Iog"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -155,6 +161,7 @@ class GoogleMap extends Component {
                                     <div className="rn-contact-map-area position-relative">
                                         <div style={{ height: '550px', width: '100%' }}>
                                             <GoogleMapReact
+                                            bootstrapURLKeys={{key: "AIzaSyDtnA-1Tp9ZCWipHv8tAfO8ZGnfIdY-Iog"}}
                                             defaultCenter={this.props.center}
                                             defaultZoom={this.props.zoom}
                                             >
@@ -167,6 +174,7 @@ class GoogleMap extends Component {
                                         </div>
                                     </div>
                                 </div>
+
                                 {/* End Single Map  */}
                             </div>
                         </div>

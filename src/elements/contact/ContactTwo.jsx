@@ -21,11 +21,12 @@ class ContactTwo extends Component{
                                 <h2 className="title">Contact With Us.</h2>
                                 <div className="im_address">
                                     <span>Call us directly:</span>
-                                    <a className="link im-hover" href="phone">+111 (0)55 5869 8976</a>
+                                    
+                                    <a className="link im-hover" href="tel:+786 608 6021">+786 608 6021</a>
                                 </div>
                                 <div className="im_address mt--5">
                                     <span>Contact Email:</span>
-                                    <a className="link im-hover" href="email">example@gmail.com</a>
+                                    <a className="link im-hover" href="email">ainomadsmiami@gmail.com</a>
                                 </div>
                             </div>
                             <div className="form-wrapper">
@@ -78,7 +79,7 @@ class ContactTwo extends Component{
                         </div>
                         <div className="col-lg-6 order-1 order-lg-2">
                             <div className="thumbnail mb_md--30 mb_sm--30">
-                                <img src="/assets/images/about/about-12.jpg" alt="trydo"/>
+                                <img src="/assets/images/about/founder.jpeg" alt="trydo"/>
                             </div>
                         </div>
                     </div>
