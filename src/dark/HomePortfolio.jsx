@@ -152,7 +152,7 @@ class HomePortfolio extends Component {
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
                                                 {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
-                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="#">Contact Us</a></div> : ''}
+                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Contact Us</a></div> : ''}
                                             </div>
                                         </div>
                                     </div>
