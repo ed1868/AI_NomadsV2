@@ -53,9 +53,9 @@ class About extends Component{
                                 <div className="inner">
                                     <div className="content-wrapper">
                                         <div className="content">
-                                            <h4 className="theme-gradient">Find Your Work Now</h4>
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
-                                            <a className="btn-default" href="/about">Get Started</a>
+                                            <h4 className="theme-gradient">Your Business, On Blockchain</h4>
+                                            <p>Our enginners can onboard your business into the Ethereum Blockchain to benefit from its amazing features. Smart Contracts, making your own COIN, and every transcation being done safely and securily are some of the best features of Ethereum Blockchain </p>
+                                            <a className="btn-default" href="/contact">Get Started</a>
                                         </div>
                                     </div>
                                 </div>

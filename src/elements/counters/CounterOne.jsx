@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { FiHeart, FiClock, FiCheckCircle, FiAward } from "react-icons/fi";
 
-import { FaEthereum } from 'react-icons/fa';
+import { FaEthereum , FaAppStore} from 'react-icons/fa';
 
 class CounterOne extends Component {
     state = {
@@ -35,7 +35,7 @@ class CounterOne extends Component {
             },
 
             {
-                icon: <FaEthereum />,
+                icon: <FaAppStore />,
                 countNum: 3,
                 countTitle: 'Complete Apps',
             }
