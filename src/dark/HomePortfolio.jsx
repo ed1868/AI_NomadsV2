@@ -218,8 +218,11 @@ class HomePortfolio extends Component {
                                 <div className="section-title text-center mb--30">
                                     <span className="subtitle">Artificial Intelligence Nomads</span>
                                     <br></br>
-                                    <h2 className="title theme-gradient">Building a future you can trust</h2>
-                                    <p className="description">Artificial Intelligence is inevitable, our goal is to ensure the future of AI is ethically safe<br /> by solving business problems with the values and intergrity we deserve.</p>
+                                    <h2 className="title theme-gradient">Building a Blockchain future you can trust</h2>
+                                    <p className="description">Artificial Intelligence is inevitable, our goal is to ensure the future of AI is ethically safe<br /> by solving business problems with the values and intergrity we deserve.<br></br>
+                                    <br></br>
+                                    We speciallize in Blockchain Technology using Ethereum, Solidity and Web3. 
+                                    </p>
                                 </div>
                             </div>
                         </div>

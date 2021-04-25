@@ -19,7 +19,7 @@ class About extends Component{
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
-                <Breadcrumb title={'About'}   />
+                <Breadcrumb title={'About AI Nomads'}   />
                 {/* End Breadcrump Area */}
 
                 {/* Start About Area */}
