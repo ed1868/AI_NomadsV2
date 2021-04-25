@@ -1,49 +1,50 @@
-import React, { Component , Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { FiHeart, FiClock, FiCheckCircle, FiAward } from "react-icons/fi";
 
+import { FaEthereum } from 'react-icons/fa';
 
-class CounterOne extends Component{
+class CounterOne extends Component {
     state = {
         didViewCountUp: false
     };
     onVisibilityChange = isVisible => {
         if (isVisible) {
-            this.setState({didViewCountUp: true});
+            this.setState({ didViewCountUp: true });
         }
     }
-    render(){
+    render() {
         let Data = [
             {
                 icon: <FiHeart />,
-                countNum : 199,
-                countTitle: 'Staticfied Customers',
+                countNum: 20,
+                countTitle: 'Satisfied Clients',
             },
 
             {
-                icon: <FiClock />,
-                countNum : 575,
-                countTitle: 'Days Of Operation',
+                icon: <FaEthereum />,
+                countNum: 5,
+                countTitle: 'Ethereum Projects Launched',
             },
 
             {
                 icon: <FiCheckCircle />,
-                countNum : 49,
-                countTitle: 'Complete Project',
+                countNum: 49,
+                countTitle: 'Complete Projects',
             },
 
             {
-                icon: <FiAward />,
-                countNum : 55,
-                countTitle: 'Win Awards',
+                icon: <FaEthereum />,
+                countNum: 3,
+                countTitle: 'Complete Apps',
             }
         ];
 
-        return(
+        return (
             <Fragment>
                 <div className="row mt--30">
-                    {Data.map( (value, index) => (
+                    {Data.map((value, index) => (
                         <div className="im_single_counterup col-lg-3 col-md-4 col-sm-6 col-12" key={index}>
                             <div className="im_counterup">
                                 <div className="inner">
@@ -51,7 +52,7 @@ class CounterOne extends Component{
                                         {value.icon}
                                     </div>
                                     <h2 className="counter">
-                                        <VisibilitySensor onChange={this.onVisibilityChange} offset={{top:10}} delayedCall>
+                                        <VisibilitySensor onChange={this.onVisibilityChange} offset={{ top: 10 }} delayedCall>
                                             <CountUp end={this.state.didViewCountUp ? value.countNum : 0} />
                                         </VisibilitySensor>
                                     </h2>

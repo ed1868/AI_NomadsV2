@@ -34,9 +34,9 @@ class About extends Component{
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-center">
-                                    <span className="subtitle">Experts growts</span>
+                                    <span className="subtitle">Nomad Expansion</span>
                                     <h2 className="title">Our Company Growth</h2>
-                                    <p className="description">We have grown strength over the past 20 years.</p>
+                                    <p className="description">We have grown strength over the past year</p>
                                 </div>
                             </div>
                         </div>
