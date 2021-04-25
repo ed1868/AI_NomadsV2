@@ -60,7 +60,7 @@ class Header extends Component{
                     <div className="header-right">
                         <nav className="mainmenunav d-lg-block">
                             <ul className="mainmenu">
-                                <li className="has-droupdown"><Link to="#">Home</Link>
+                                <li className="has-droupdown"><Link to="/">Home</Link>
                                     <ul className="submenu">
                                         <li><a href="https://github.com/ed1868">GitHub</a></li>
                                         {/* <li><Link to="/main-demo">Main Demo</Link></li>
@@ -119,7 +119,9 @@ class Header extends Component{
                                         <li><Link to="/pricing-table">Pricing Table</Link></li>
                                     </ul>
                                 </li> */}
+                                <li><Link to="/team">Team</Link></li>
                                 <li><Link to="/contact" >Contact</Link></li>
+
                             </ul>
                         </nav>
                         {/* <div className="header-btn">
