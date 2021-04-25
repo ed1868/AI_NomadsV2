@@ -18,14 +18,14 @@ const Team = () => {
             {/* End Header Area  */}
 
             {/* Start Breadcrump Area */}
-            <Breadcrumb title={'Team'}   />
+            <Breadcrumb title={'Nomads'}   />
             {/* End Breadcrump Area */}
 
             {/* Start Page Wrapper  */}
             <main className="page-wrapper">
 
                 {/* Start Team Area  */}
-                <div className="rn-team-wrapper ptb--120 bg_color--1">
+                {/* <div className="rn-team-wrapper ptb--120 bg_color--1">
                     <div className="rn-team-area">
                         <div className="container">
                             <div className="row">
@@ -40,11 +40,11 @@ const Team = () => {
                             <TeamOne column="col-lg-4" teamStyle="" item="3" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Team Area  */}
 
                 {/* Start Team Area  */}
-                <div className="rn-team-wrapper ptb--120 bg_color--5">
+                {/* <div className="rn-team-wrapper ptb--120 bg_color--5">
                     <div className="rn-team-area">
                         <div className="container">
                             <div className="row">
@@ -59,7 +59,7 @@ const Team = () => {
                             <TeamTwo column="col-lg-3" teamStyle="" item="4" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Team Area  */}
 
                 {/* Start Team Area  */}
@@ -70,12 +70,12 @@ const Team = () => {
                                 <div className="col-lg-12">
                                     <div className="section-title text-center mb--30">
                                         <span className="subtitle">Our Experts</span>
-                                        <h2 className="title">Our Skilled Team</h2>
-                                        <p className="description">There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p>
+                                        <h2 className="title">The Skilled Nomads</h2>
+                                        <p className="description">We are proud to be part of the Miami Tech Boom and the Greater Miami tech scene. <br /> We are expanding our horizons internationally to ensure quality software.<br></br> Meet the growing team that makes it happen</p>
                                     </div>
                                 </div>
                             </div>
-                            <TeamOne column="col-lg-3" teamStyle="team-style--bottom" item="8" />
+                            <TeamOne column="col-lg-4" teamStyle="team-style--bottom" item="3" />
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,8 @@ import { FaFacebookF , FaLinkedinIn , FaTwitter } from "react-icons/fa";
 let data = [
     {
         images: '01',
-        title: 'Benjamin',
-        designation: 'Sr. Web Developer',
+        title: 'Eddie',
+        designation: 'Founder | Sr. Software Engineer',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
@@ -23,8 +23,8 @@ let data = [
     },
     {
         images: '02',
-        title: 'Theodore Sefa',
-        designation: 'Front-end Engineer',
+        title: 'Cristhian',
+        designation: 'Sr. UX/UI Designer',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
@@ -37,9 +37,9 @@ let data = [
         ]
     },
     {
-        images: '03',
-        title: 'Christopher',
-        designation: 'Sr. Graphic Designer',
+        images: '04',
+        title: 'Maria',
+        designation: 'Sr. Software Engineer',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
