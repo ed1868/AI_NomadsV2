@@ -10,6 +10,7 @@ import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import AboutComp from "../component/HomeLayout/homeOne/About";
+import Team from "../blocks/Team";
 
 class About extends Component{
     render(){
@@ -66,6 +67,9 @@ class About extends Component{
                 {/* End Finding Us Area  */}
 
                 {/* Start Team Area  */}
+<Team  nomadSection={true} />
+
+{/* 
                 <div className="rn-team-area bg_color--1 ptb--120">
                     <div className="container">
                         <div className="row">
@@ -76,11 +80,11 @@ class About extends Component{
                                     <p className="description">There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="row">
+                        </div> */}
+                        {/* <div className="row"> */}
                             
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-01.jpg" alt="Blog Images"/>
@@ -95,11 +99,11 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-02.jpg" alt="Blog Images"/>
@@ -114,11 +118,11 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-03.jpg" alt="Blog Images"/>
@@ -133,20 +137,20 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
-                        </div>
-                    </div>
-                </div>
+                        {/* </div> */}
+                    {/* </div> */}
+                {/* </div> */}
                 {/* End Team Area  */}
 
                 {/* Start Testimonial Area */}
-                <div className="rn-testimonial-area bg_color--5 ptb--120">
+                {/* <div className="rn-testimonial-area bg_color--5 ptb--120">
                     <div className="container">
                         <Testimonial />
                     </div>
-                </div>
+                </div> */}
                 {/* End Testimonial Area */}
 
                 {/* Start Brand Area */}
