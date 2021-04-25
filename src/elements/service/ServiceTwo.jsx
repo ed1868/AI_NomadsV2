@@ -38,7 +38,7 @@ class ServiceTwo extends Component{
     render(){
         let title = 'Services provided for you.',
         description = 'You have a problem? Our engineers are standing by ready to lend a helping hand.',
-        subtitle= 'What we can do for you';
+        subtitle= 'What we can do';
         return(
             <React.Fragment>
                 <div className="container">
