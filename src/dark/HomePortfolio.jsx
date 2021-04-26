@@ -141,7 +141,7 @@ class HomePortfolio extends Component {
                             }}
                         />
                     </div>
-                    <div className="im_modern_slider bg_image bg_image--24 ">
+                    <div className="im_modern_slider bg_image bg_image--28 ">
                         {SlideList.map((value, index) => (
                             <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
                                 <div className="container">
