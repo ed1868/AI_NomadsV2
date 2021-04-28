@@ -63,6 +63,7 @@ class Header extends Component{
                                 <li className="has-droupdown"><Link to="/">Home</Link>
                                     <ul className="submenu">
                                         <li><a href="https://github.com/ed1868">GitHub</a></li>
+                                        
                                         {/* <li><Link to="/main-demo">Main Demo</Link></li>
                                         <li><Link to="/dark-main-demo">Main Demo Dark</Link></li>
                                         <li><Link to="/personal-portfolio">Personal Portfolio</Link></li>
@@ -82,6 +83,7 @@ class Header extends Component{
                                         <li><Link to="/creative-portfolio">Creative Portfolio</Link></li> */}
                                     </ul>
                                 </li>
+                                
                                 {/* <li className="has-droupdown"><Link to="/service" >Service</Link>
                                     <ul className="submenu">
                                         <li><Link to="/service">Service</Link></li>
@@ -90,7 +92,7 @@ class Header extends Component{
                                 </li> */}
                                 <li><Link to="/about" >About</Link></li>
                                 <li><Link to="/" >NFT Store</Link></li>
-
+                                <li><Link to="/service">Services</Link></li>
                                 {/* <li className="has-droupdown"><Link to="#pages" >Pages</Link>
                                     <ul className="submenu">
                                         <li><Link to="/blog">Blog List</Link></li>
