@@ -92,7 +92,7 @@ class Root extends Component{
 
 
                     {/* Element Layot */}
-                    <Route exact path={`${process.env.PUBLIC_URL}/service`} component={Service}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/services`} component={Service}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/service-details`} component={ServiceDetails}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About}/>
