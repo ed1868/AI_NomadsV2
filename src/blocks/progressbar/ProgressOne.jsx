@@ -6,7 +6,7 @@ const ProgressOne = (props) => {
         // Start Single Progressbar 
         <div className={`rn-progress-bar ${props.ProgressStyle}`}>
             <div className="single-progress">
-                <h6 className="title">Development</h6>
+                <h6 className="title">Ethereum Development</h6>
                 <ProgressBar now={95} />
                 <span className="label">95%</span>
             </div>

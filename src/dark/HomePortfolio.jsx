@@ -6,6 +6,7 @@ import FooterTwo from "../component/footer/FooterTwo";
 import Helmet from "../component/common/Helmet";
 import ModalVideo from 'react-modal-video';
 import ProgressOne from "../blocks/progressbar/ProgressOne";
+import ProgressTwo from "../blocks/progressbar/ProgressTwo";
 import ServiceTwo from "../elements/service/ServiceTwo";
 import Particles from 'react-particles-js';
 import { FiActivity, FiCast, FiMap } from "react-icons/fi";
@@ -264,7 +265,8 @@ class HomePortfolio extends Component {
                                         <h2 className="title">Agency Skill Levels</h2>
                                         <p className="description">Our Miami Team continuous to achieve excellence.</p>
                                     </div>
-                                    <ProgressOne ProgressStyle="progress-bar--3" />
+                                <ProgressTwo ProgressStyle="progress-bar--2" />
+                                    {/* <ProgressOne ProgressStyle="progress-bar--3" /> */}
                                 </div>
 
                             </div>

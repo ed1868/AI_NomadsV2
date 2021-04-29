@@ -25,7 +25,8 @@ class About extends Component {
                                         <div className="icon">
                                             <FiSend />
                                         </div>
-                                        <h2 className="title">{title}</h2>
+                                        <br></br>
+                                        <h2 className="title theme-gradient">{title}</h2>
                                         <p className="description">{description}</p>
                                         <p className="description">{description2}</p>
                                         <p className="description">{description3}</p>
