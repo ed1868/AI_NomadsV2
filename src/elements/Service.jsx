@@ -117,14 +117,14 @@ class Service extends Component {
 
 
                 {/* Start Feature Area  */}
-                <div id="feature" className="service-area bg_color--10 ptb--120">
+                <div id="feature" className="service-area bg_color--1 ptb--120">
                     <div className="wrapper plr--120">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-center pb--30">
                                     <span className="subtitle">Intelligent Magic</span>
                                     <br></br>
-                                    <h2 className="title theme-gradient">Our Awesome Features</h2>
+                                    <h2 className="title ">Our Awesome Features</h2>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +150,7 @@ class Service extends Component {
                 {/* End Feature Area  */}
 
 
-                <div className="service-area pb--120 bg_color--10 pt-5">
+                <div className="service-area pb--120 bg_color--1 pt-5">
                     <div className="container">
                         <ServiceTwo />
                     </div>

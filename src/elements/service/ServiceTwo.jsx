@@ -47,7 +47,7 @@ class ServiceTwo extends Component{
                             <div className="section-title text-center">
                                 <span className="subtitle">{subtitle}</span>
                                 <br></br>
-                                <h2 className="title theme-gradient">{title}</h2>
+                                <h2 className="title ">{title}</h2>
                                 <p className="description" dangerouslySetInnerHTML={{ __html: description }}></p>
                             </div>
                         </div>

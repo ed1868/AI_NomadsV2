@@ -39,42 +39,42 @@ const SlideList = [
 
 const featureList = [
     {
-        icon: <FaReact/>,
+        icon: <FaReact />,
         title: 'Latest React Bundle',
         subtitle: 'We use the latest React framework version for a clean user friendly interface. '
     },
     {
-        icon: <FiSmartphone/>,
+        icon: <FiSmartphone />,
         title: 'Perfect Responsive',
         subtitle: 'Our apps and websites are Perfect for all devices.'
     },
     {
-        icon: <FiCode/>,
+        icon: <FiCode />,
         title: 'Blockchain and Ethereum',
         subtitle: 'We have implemented Ethreum protocols with Solidity and Web3.js to give our clients a head start on blockchain technology.'
     },
     {
-        icon: <FaSass/>,
+        icon: <FaSass />,
         title: 'Sass',
         subtitle: 'We use Sass in every project to give logic to our styles.'
     },
     {
-        icon: <FiDownload/>,
+        icon: <FiDownload />,
         title: 'Fast Loading Speed',
         subtitle: 'Our team is fast. Our Artificial Intelligence models? Even Faster '
     },
     {
-        icon: <FiCommand/>,
+        icon: <FiCommand />,
         title: 'Modern Design',
         subtitle: 'AI Nomads is a modern creative team that doesnt get with the times. It goes beyond them.'
     },
     {
-        icon: <FiHeadphones/>,
+        icon: <FiHeadphones />,
         title: '24 Support System',
         subtitle: 'We provide 24 hour support for all clients. We are one click away.'
     },
     {
-        icon: <FiBold/>,
+        icon: <FiBold />,
         title: 'Bitcoin and alt coins',
         subtitle: 'With blockchain we intergrate payment systems like Bitcoin and other Alt Coins.'
     }
@@ -221,8 +221,8 @@ class HomePortfolio extends Component {
                                     <br></br>
                                     <h2 className="title theme-gradient">Building a Blockchain future you can trust</h2>
                                     <p className="description">Artificial Intelligence is inevitable, our goal is to ensure the future of AI is ethically safe<br /> by solving business problems with the values and intergrity we deserve.<br></br>
-                                    <br></br>
-                                    We speciallize in Blockchain Technology using Ethereum, Solidity and Web3. 
+                                        <br></br>
+                                    We speciallize in Blockchain Technology using Ethereum, Solidity and Web3.
                                     </p>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@ class HomePortfolio extends Component {
                                         <h2 className="title">Agency Skill Levels</h2>
                                         <p className="description">Our Miami Team continuous to achieve excellence.</p>
                                     </div>
-                                <ProgressTwo ProgressStyle="progress-bar--2" />
+                                    <ProgressTwo ProgressStyle="progress-bar--2" />
                                     {/* <ProgressOne ProgressStyle="progress-bar--3" /> */}
                                 </div>
 
@@ -275,38 +275,38 @@ class HomePortfolio extends Component {
                 </div>
                 {/* End Progress Bar Area   */}
 
-                                    {/* Start Feature Area  */}
-                                    <div id="feature" className="service-area bg_color--1 ptb--120">
-                        <div className="wrapper plr--120">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="section-title text-center pb--30">
-                                        <span className="subtitle">Intelligent Magic</span>
-                                        <br></br>
-                                        <h2 className="title theme-gradient">Our Awesome Features</h2>
-                                    </div>
+                {/* Start Feature Area  */}
+                <div id="feature" className="service-area bg_color--1 ptb--120">
+                    <div className="wrapper plr--120">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-title text-center pb--30">
+                                    <span className="subtitle">Intelligent Magic</span>
+                                    <br></br>
+                                    <h2 className="title theme-gradient">Our Awesome Features</h2>
                                 </div>
                             </div>
-                            <div className="row service-main-wrapper">
-                                {/* Start Single Feature  */}
-                                {featureList.map((value, i) => (
-                                    <div className="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12" key={i}>
-                                        <div className="service service__style--2 text-left">
-                                            <div className="icon">
-                                                {value.icon}
-                                            </div>
-                                            <div className="content">
-                                                <h3 className="title">{value.title}</h3>
-                                                <p className="subtitle">{value.subtitle}</p>
-                                            </div>
+                        </div>
+                        <div className="row service-main-wrapper">
+                            {/* Start Single Feature  */}
+                            {featureList.map((value, i) => (
+                                <div className="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12" key={i}>
+                                    <div className="service service__style--2 text-left">
+                                        <div className="icon">
+                                            {value.icon}
+                                        </div>
+                                        <div className="content">
+                                            <h3 className="title">{value.title}</h3>
+                                            <p className="subtitle">{value.subtitle}</p>
                                         </div>
                                     </div>
-                                ))}
-                                {/* End Single Feature  */}
-                            </div>
+                                </div>
+                            ))}
+                            {/* End Single Feature  */}
                         </div>
                     </div>
-                    {/* End Feature Area  */}
+                </div>
+                {/* End Feature Area  */}
 
                 {/* Start Brand Area */}
                 {/* <div className="rn-brand-area pb--120 bg_color--10">

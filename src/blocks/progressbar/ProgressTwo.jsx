@@ -29,7 +29,7 @@ const ProgressTwo = (props) => {
                 <ProgressBar now={89} />
                 <span className="label">89%</span>
             </div>
-            <div className="slide-btn mt-5 pt-5"><a className="btn-default btn-large" href="/contact">Contact Us</a> </div>
+            <div className="slide-btn mt-5 pt-5"><a className="btn-default btn-large" href="/contact">Leave a Review</a> </div>
         </div>
         // {/* // End Progress Bar */}
     )
