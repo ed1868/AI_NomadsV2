@@ -41,7 +41,7 @@ class ServiceTwo extends Component{
         subtitle= 'What we can do';
         return(
             <React.Fragment>
-                <div className="container">
+                <div className="container bg-">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="section-title text-center">
