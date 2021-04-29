@@ -11,7 +11,7 @@ import Footer from "../component/footer/Footer";
 
 
 
-
+let apiKey = "AIzaSyCruKqAZrnGWMhtCurXIdLmneO7iDIylkI";
 
 const AnyReactComponent = ({ text }) => {
 console.log('THE FUCKING TEXT : ', text)
@@ -126,7 +126,7 @@ class Contact extends Component {
                 <div className="rn-contact-map-area position-relative">
                     <div style={{ height: '650px', width: '100%' }}>
                         <GoogleMapReact
-                            bootstrapURLKeys={{ key: "AIzaSyCruKqAZrnGWMhtCurXIdLmneO7iDIylkI" }}
+                            bootstrapURLKeys={{ key: apiKey }}
                             defaultCenter={this.props.center}
                             defaultZoom={this.props.zoom}
                         >
