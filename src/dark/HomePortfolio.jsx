@@ -10,6 +10,10 @@ import ProgressTwo from "../blocks/progressbar/ProgressTwo";
 import ServiceTwo from "../elements/service/ServiceTwo";
 import Particles from 'react-particles-js';
 import { FiActivity, FiCast, FiMap } from "react-icons/fi";
+import { Widget } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
+
 
 import {
     FaReact,
@@ -110,6 +114,12 @@ class HomePortfolio extends Component {
     openModal() {
         this.setState({ isOpen: true })
     }
+
+
+    handleNewUserMessage = (newMessage) => {
+        console.log(`New message incomig! ${newMessage}`);
+        // Now send the message throught the backend API
+      }
     render() {
 
         return (
@@ -305,6 +315,9 @@ class HomePortfolio extends Component {
                             {/* End Single Feature  */}
                         </div>
                     </div>
+                    {/* <div id="chat" className="chat ml-5">
+                <Widget    handleNewUserMessage={this.handleNewUserMessage} />
+                </div> */}
                 </div>
                 {/* End Feature Area  */}
 
@@ -335,15 +348,23 @@ class HomePortfolio extends Component {
                     </div>
                 </div> */}
                 {/* End Brand Area */}
-
+       
                 {/* Start Footer Area  */}
                 <FooterTwo />
                 {/* End Footer Area  */}
                 {/* Start Back To Top */}
                 <div className="backto-top">
-                    <ScrollToTop showUnder={160}>
+                <div className="row mt-5">
+                    <div className="col-md-12">
+                    <div id="chat" className="chat ml-5">
+                <Widget    handleNewUserMessage={this.handleNewUserMessage} />
+                </div>
+                    </div>
+
+                </div>
+                    {/* <ScrollToTop showUnder={160}>
                         <FiChevronUp />
-                    </ScrollToTop>
+                    </ScrollToTop> */}
                 </div>
                 {/* End Back To Top */}
             </div>
