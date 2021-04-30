@@ -354,17 +354,17 @@ class HomePortfolio extends Component {
                 {/* End Footer Area  */}
                 {/* Start Back To Top */}
                 <div className="backto-top">
-                <div className="row mt-5">
+                {/* <div className="row mt-5">
                     <div className="col-md-12">
                     <div id="chat" className="chat ml-5">
                 <Widget    handleNewUserMessage={this.handleNewUserMessage} />
                 </div>
                     </div>
 
-                </div>
-                    {/* <ScrollToTop showUnder={160}>
+                </div> */}
+                    <ScrollToTop showUnder={160}>
                         <FiChevronUp />
-                    </ScrollToTop> */}
+                    </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
             </div>
