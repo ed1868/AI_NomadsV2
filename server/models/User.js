@@ -6,6 +6,12 @@ const userSchema = new Schema(
     username: String,
     email: String,
     phone: String,
+    messages: [
+      {
+        subject: String,
+        text: String
+      }
+    ]
   },
   {
     timestamps: {

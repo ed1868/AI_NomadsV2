@@ -21,6 +21,10 @@ let users = [
     email: 'info@ainomads.com',
     phone: '7896059877',
     password: bcrypt.hashSync('alice', bcrypt.genSaltSync(bcryptSalt)),
+    messages:[{
+      subject: "I need a new project manager",
+      text: "please call me"
+    }]
   },
   {
     username: 'bob',
