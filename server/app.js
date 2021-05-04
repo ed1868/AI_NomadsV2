@@ -10,6 +10,7 @@ const logger = require('morgan')
 const nocache = require('nocache')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
+const nodemailer = require("nodemailer");
 
 require('./configs/database')
 

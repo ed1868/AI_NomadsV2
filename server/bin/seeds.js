@@ -18,7 +18,7 @@ require('../configs/database')
 let users = [
   {
     username: 'alice',
-    email: 'info@ainomads.com',
+    email: 'hwek21@gmail.com',
     phone: '7896059877',
     password: bcrypt.hashSync('alice', bcrypt.genSaltSync(bcryptSalt)),
     messages:[{
