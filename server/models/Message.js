@@ -3,9 +3,11 @@ const Schema = mongoose.Schema
 
 const messageSchema = new Schema(
   {
-    username: String,
-    email: String,
-    phone: String,
+    userId: String,
+    email:String,
+    subject: String,
+    text: String,
+    previousMessages: Array
   },
   {
     timestamps: {
