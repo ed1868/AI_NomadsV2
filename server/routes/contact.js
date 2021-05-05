@@ -54,6 +54,7 @@ router.get('/', (req, res, next) => {
 router.post('/request', (req, res, next) => {
     // const { email, phone, subject, text } = req.body
 
+    console.log('request body: ', req.body)
     const email = "hwek21@gmail.com";
     const username = email;
     const phone = "7866086021"
