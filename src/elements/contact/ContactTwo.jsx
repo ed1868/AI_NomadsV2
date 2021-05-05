@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {  Component } from "react";
 
 class ContactTwo extends Component{
     constructor(props){
@@ -9,7 +9,22 @@ class ContactTwo extends Component{
             rnSubject: '',
             rnMessage: '',
         };
+
+        this.onFormSubmit = this.onFormSubmit.bind(this);
+        
+   
     }
+   
+    onFormSubmit(event) {
+    // const { tags } = this.state;
+    // this.setState({
+    //   tags: tags.filter((tag, index) => index !== i),
+    // });
+    event.preventDefault()
+    console.log('ENTRO EN FORM SUBMIT!!!')
+}
+
+        
     render(){
         return(
             <div className="contact-form--1">
@@ -30,7 +45,7 @@ class ContactTwo extends Component{
                                 </div>
                             </div>
                             <div className="form-wrapper">
-                                <form>
+                                <form onSubmit={(event) => { this.onFormSubmit(event)}}>
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
