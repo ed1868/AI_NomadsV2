@@ -14,7 +14,7 @@ import Footer from "../component/footer/Footer";
 let apiKey = "AIzaSyCruKqAZrnGWMhtCurXIdLmneO7iDIylkI";
 
 const AnyReactComponent = ({ text }) => {
-console.log('THE FUCKING TEXT : ', text)
+console.log('NOMAD TEXTS : ', text)
     return (
         <div>{text}</div>
     )

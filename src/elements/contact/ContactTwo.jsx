@@ -7,10 +7,11 @@ class ContactTwo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rnName: '',
-            rnEmail: '',
-            rnSubject: '',
-            rnMessage: '',
+            nomadName: '',
+            nomadPhone: '',
+            nomadEmail: '',
+            nomadSubject: '',
+            nomadMessage: '',
         };
 
         this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -63,20 +64,37 @@ class ContactTwo extends Component {
                                             type="text"
                                             name="name"
                                             id="item01"
-                                            value={this.state.rnName}
-                                            onChange={(e) => { this.setState({ rnName: e.target.value }); }}
+                                            value={this.state.nomadName}
+                                            onChange={(e) => { this.setState({ nomadName: e.target.value }); }}
                                             placeholder="Your Name *"
+                                            required
                                         />
                                     </label>
+
+
 
                                     <label htmlFor="item02">
                                         <input
                                             type="text"
                                             name="email"
                                             id="item02"
-                                            value={this.state.rnEmail}
-                                            onChange={(e) => { this.setState({ rnEmail: e.target.value }); }}
+                                            value={this.state.nomadEmail}
+                                            onChange={(e) => { this.setState({ nomadEmail: e.target.value }); }}
                                             placeholder="Your email *"
+                                            required
+                                        />
+                                    </label>
+
+                                    <label htmlFor="item05">
+                                        <input
+                                            type="tel"
+                                            id="item05"
+                                            name="phone"
+                                            //   IF YOU NEED A CERTAIN PATTERN UNCOMMENT THIS
+                                            //   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                            value={this.state.nomadPhone}
+                                            onChange={(e) => { this.setState({ nomadPhone: e.target.value }) }}
+                                            placeholder="Your phone number"
                                         />
                                     </label>
 
@@ -85,8 +103,8 @@ class ContactTwo extends Component {
                                             type="text"
                                             name="subject"
                                             id="item03"
-                                            value={this.state.rnSubject}
-                                            onChange={(e) => { this.setState({ rnSubject: e.target.value }); }}
+                                            value={this.state.nomadSubject}
+                                            onChange={(e) => { this.setState({ nomadSubject: e.target.value }); }}
                                             placeholder="Write a Subject"
                                         />
                                     </label>
@@ -95,9 +113,10 @@ class ContactTwo extends Component {
                                             type="text"
                                             id="item04"
                                             name="message"
-                                            value={this.state.rnMessage}
-                                            onChange={(e) => { this.setState({ rnMessage: e.target.value }); }}
-                                            placeholder="Your Message"
+                                            value={this.state.nomadMessage}
+                                            onChange={(e) => { this.setState({ nomadMessage: e.target.value }); }}
+                                            placeholder="Your Message *"
+                                            required
                                         />
                                     </label>
                                     <button className="btn-default" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit Now</button>
