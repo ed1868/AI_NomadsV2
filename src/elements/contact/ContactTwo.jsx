@@ -24,11 +24,20 @@ class ContactTwo extends Component {
         // this.setState({
         //   tags: tags.filter((tag, index) => index !== i),
         // });
-        event.preventDefault()
+        event.preventDefault();
         console.log('ENTRO EN FORM SUBMIT!!! : ', event);
 
+        const formData = {
+            name: this.state.nomadName,
+            phone: this.state.nomadPhone,
+            email: this.state.nomadEmail,
+            subject: this.state.nomadSubject,
+            text: this.state.nomadMessage
+        }
 
-        api.sendFlare("hello from front end").then(result => {
+        console.log('FORM DATA : ', formData);
+
+        api.sendFlare(formData).then(result => {
             console.log('SUCCESSS NIH : ', result);
         }).catch(err => {
             if (err) {
