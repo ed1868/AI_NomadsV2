@@ -31,6 +31,9 @@ import CorporateBusiness from './home/CorporateBusiness';
 import DarkMainDemo from './dark/MainDemo';
 import DarkPortfolioLanding from './dark/PortfolioLanding';
 import HomePortfolio from './dark/HomePortfolio';
+import NftMarketPlace from './dark/NftMarketPlace';
+
+
 
 // Element Layout
 import Service from "./elements/Service";
@@ -59,6 +62,7 @@ import PricingTable from "./blocks/PricingTable";
 import Button from "./blocks/Button";
 
 
+
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
@@ -70,6 +74,7 @@ class Root extends Component{
                 <Switch>
                     {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo}/> */}
                     <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomePortfolio}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={NftMarketPlace}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
