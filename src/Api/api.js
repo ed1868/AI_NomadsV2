@@ -25,6 +25,12 @@ export default {
 
         return service.post('/request', requestDetails).then(response => {
             console.log('SUCCESFULL RESPONSE : ', response);
+            if (response.status == 200) {
+                return response.data;
+            }
+            else {
+                console.log('RESPONSE WAS DIFFERENT : ', response)
+            }
         }).catch(errHandler)
 
     },

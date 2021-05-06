@@ -101,7 +101,8 @@ router.post('/request', (req, res, next) => {
                 let emailPayload = {
                     email, subject, text
                 }
-                emailSender(emailPayload)
+                emailSender(emailPayload);
+               return  res.status(200).json({ message: "did a whole succesfull loop" });
             }).catch(err => {
                 if (err) {
                     console.log('TENGO UN ERROR ', err
