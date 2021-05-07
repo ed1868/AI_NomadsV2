@@ -44,6 +44,7 @@ import PortfolioDetails from "./elements/PortfolioDetails";
 import Blog from "./elements/Blog";
 import BlogDetails from "./elements/BlogDetails";
 import error404 from "./elements/error404";
+import ComingSoon from "./elements/comingSoon"
 
 
 // Blocks Layout
@@ -74,7 +75,8 @@ class Root extends Component{
                 <Switch>
                     {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo}/> */}
                     <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomePortfolio}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={NftMarketPlace}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={ComingSoon}/>
+                    {/* <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={NftMarketPlace}/> */}
                     <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
@@ -123,7 +125,7 @@ class Root extends Component{
                     
 
 
-                    
+                    <Route exact path={`${process.env.PUBLIC_URL}/comingSoon`} component={ComingSoon}/>
                     <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
                     <Route component={error404}/>
 
