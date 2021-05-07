@@ -1,6 +1,6 @@
 import React, { Component, Fragment, useEffect } from "react";
 import ScrollToTop from 'react-scroll-up';
-import PortfolioMasonry from "../elements/portfolio/PortfolioMasonry";
+import PortfolioNft from "../elements/portfolio/PortfolioNft";
 import Header from "../component/header/Header";
 import FooterTwo from "../component/footer/FooterTwo";
 import Helmet from "../component/common/Helmet";
@@ -48,42 +48,42 @@ const SlideList = [
 const featureList = [
     {
         icon: <FaReact />,
-        title: 'Latest React Bundle',
+        title: 'Digital Art',
         subtitle: 'We use the latest React framework version for a clean user friendly interface. '
     },
     {
         icon: <FiSmartphone />,
-        title: 'Perfect Responsive',
+        title: 'Literature',
         subtitle: 'Our apps and websites are Perfect for all devices.'
     },
     {
         icon: <FiCode />,
-        title: 'Blockchain and Ethereum',
+        title: 'Music',
         subtitle: 'We have implemented Ethreum protocols with Solidity and Web3.js to give our clients a head start on blockchain technology.'
     },
     {
         icon: <FaSass />,
-        title: 'Sass',
+        title: 'Sports',
         subtitle: 'We use Sass in every project to give logic to our styles.'
     },
     {
         icon: <FiDownload />,
-        title: 'Fast Loading Speed',
+        title: 'Social Media',
         subtitle: 'Our team is fast. Our Artificial Intelligence models? Even Faster '
     },
     {
         icon: <FiCommand />,
-        title: 'Modern Design',
+        title: 'Smart Contracts',
         subtitle: 'AI Nomads is a modern creative team that doesnt get with the times. It goes beyond them.'
     },
     {
         icon: <FiHeadphones />,
-        title: '24 Support System',
+        title: 'Domains',
         subtitle: 'We provide 24 hour support for all clients. We are one click away.'
     },
     {
         icon: <FiBold />,
-        title: 'Bitcoin and alt coins',
+        title: 'Gaming',
         subtitle: 'With blockchain we intergrate payment systems like Bitcoin and other Alt Coins.'
     }
 ]
@@ -107,11 +107,12 @@ const ServiceList = [
 ]
 
 
-class HomePortfolio extends Component {
+class NftMarketPlace extends Component {
     constructor() {
         super()
         this.state = {
-            isOpen: false
+            isOpen: false,
+            nft:true
         }
         this.openModal = this.openModal.bind(this)
     }
@@ -123,39 +124,39 @@ class HomePortfolio extends Component {
     handleNewUserMessage = (newMessage) => {
         console.log(`New message incomig! ${newMessage}`);
         // Now send the message throught the backend API
-      }
+    }
     render() {
 
         return (
             <div className="active-dark bg_color--10">
-                <Helmet pageTitle="Home Portfolio" />
+                <Helmet pageTitle="Nomad NFT Marketplace" />
 
                 {/* Start Header Area  */}
                 <Header />
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
-                        <div className="frame-layout__particles">
-                            <Particles
-                                params={{
-                                    "particles": {
-                                        "number": {
-                                            "value": 150
-                                        },
-                                        "size": {
-                                            "value": 3
-                                        }
+                    <div className="frame-layout__particles">
+                        <Particles
+                            params={{
+                                "particles": {
+                                    "number": {
+                                        "value": 150
                                     },
-                                    "interactivity": {
-                                        "events": {
-                                            "onhover": {
-                                                "enable": true,
-                                                "mode": "repulse"
-                                            }
+                                    "size": {
+                                        "value": 3
+                                    }
+                                },
+                                "interactivity": {
+                                    "events": {
+                                        "onhover": {
+                                            "enable": true,
+                                            "mode": "repulse"
                                         }
                                     }
-                                }}
-                            />
-                        </div>
+                                }
+                            }}
+                        />
+                    </div>
                     <div className="im_modern_slider bg_image bg_image--6 ">
                         {SlideList.map((value, index) => (
                             <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
@@ -168,7 +169,7 @@ class HomePortfolio extends Component {
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
                                                 {value.descriptionTwo ? <p className="text-white theme-gradient ">{value.descriptionTwo}</p> : ''}
                                                 {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
-                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Explore</a></div> : ''}
+                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="#nftMarketPlace">Explore</a></div> : ''}
                                             </div>
                                         </div>
                                     </div>
@@ -182,16 +183,16 @@ class HomePortfolio extends Component {
 
                 {/* Start Service Area */}
                 <div className="service-wrapper service-white pt-5 pb-5">
-                <div className="row pt-3">
-                            <div className="col-lg-12">
-                                <div className="section-title text-center mb--30">
-                                    <span className="subtitle">Create, Sell or Buy Safely through Blockchain</span>
-                                    <br></br>
-                                    <h2 className="title theme-gradient">Be part of the expanding blockchain ecosystem</h2>
-                     
-                                </div>
+                    <div className="row pt-3">
+                        <div className="col-lg-12">
+                            <div className="section-title text-center mb--30">
+                                <span className="subtitle">Create, Sell or Buy Safely through Blockchain</span>
+                                <br></br>
+                                <h2 className="title theme-gradient">Be part of the expanding blockchain ecosystem</h2>
+
                             </div>
                         </div>
+                    </div>
                     <div className="row row--25 pt-5">
                         {ServiceList.map((val, i) => (
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
@@ -239,29 +240,38 @@ class HomePortfolio extends Component {
                 {/* Start portfolio Area  */}
                 <div className="rn-portfolio-area bg_color--10 ptb--120">
                     <div className="container">
-                        <div className="row">
+                        <div id="nftMarketPlace" className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-center mb--30">
-                                    <span className="subtitle">Artificial Intelligence Nomads</span>
-                                    <br></br>
-                                    <h2 className="title theme-gradient">Building a Blockchain future you can trust</h2>
-                                    <p className="description">Artificial Intelligence is inevitable, our goal is to ensure the future of AI is ethically safe<br /> by solving business problems with the values and intergrity we deserve.<br></br>
-                                        <br></br>
-                                    We speciallize in Blockchain Technology using Ethereum, Solidity and Web3.
-                                    </p>
+                                    <h2 className="title theme-gradient">Explore Our Digital Art</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="wrapper plr--30">
                         <div className="row">
-                            <PortfolioMasonry item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" />
+                            <div className="col-lg-12 col-md-12 col-sm-12">
+                                <p className="theme-gradient text-left">Top Rated</p>
+                            </div>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"}/>
                         </div>
                         <div className="row">
-                            <PortfolioMasonry item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" />
+                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                                <p className="theme-gradient text-left">New Collections</p>
+                            </div>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"}/>
                         </div>
                         <div className="row">
-                            <PortfolioMasonry item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" />
+                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                                <p className="theme-gradient text-left">Digital Art</p>
+                            </div>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"}/>
+                        </div>
+                        <div className="row">
+                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                                <p className="theme-gradient text-left">Crypto Scriptures</p>
+                            </div>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"scriptures"}/>
                         </div>
                         {/* <div className="row">
                             <div className="col-md-12">
@@ -274,14 +284,14 @@ class HomePortfolio extends Component {
                 </div>
                 {/* End portfolio Area  */}
 
-                <div className="service-area pb--120 bg_color--10">
+                {/* <div className="service-area pb--120 bg_color--10">
                     <div className="container">
                         <ServiceTwo />
                     </div>
-                </div>
+                </div> */}
 
                 {/* Start Progress Bar Area   */}
-                <div className="rn-progress-area pb--120 bg_color--10">
+                {/* <div className="rn-progress-area pb--120 bg_color--10">
                     <div className="container">
                         <div className="row row--35 align-items-center">
                             <div className="col-lg-6 col-md-6 col-12">
@@ -297,13 +307,13 @@ class HomePortfolio extends Component {
                                         <p className="description">Our Miami Team continuous to achieve excellence.</p>
                                     </div>
                                     <ProgressTwo ProgressStyle="progress-bar--2" />
-                                    {/* <ProgressOne ProgressStyle="progress-bar--3" /> */}
+                                    <ProgressOne ProgressStyle="progress-bar--3" />
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Progress Bar Area   */}
 
                 {/* Start Feature Area  */}
@@ -314,7 +324,7 @@ class HomePortfolio extends Component {
                                 <div className="section-title text-center pb--30">
                                     <span className="subtitle">Intelligent Magic</span>
                                     <br></br>
-                                    <h2 className="title theme-gradient">Our Awesome Features</h2>
+                                    <h2 className="title theme-gradient">How NFT's Can Benefit You</h2>
                                 </div>
                             </div>
                         </div>
@@ -369,13 +379,13 @@ class HomePortfolio extends Component {
                     </div>
                 </div> */}
                 {/* End Brand Area */}
-       
+
                 {/* Start Footer Area  */}
                 <FooterTwo />
                 {/* End Footer Area  */}
                 {/* Start Back To Top */}
                 <div className="backto-top">
-                {/* <div className="row mt-5">
+                    {/* <div className="row mt-5">
                     <div className="col-md-12">
                     <div id="chat" className="chat ml-5">
                 <Widget    handleNewUserMessage={this.handleNewUserMessage} />
@@ -392,4 +402,4 @@ class HomePortfolio extends Component {
         )
     }
 }
-export default HomePortfolio;
+export default NftMarketPlace;
