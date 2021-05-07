@@ -34,8 +34,9 @@ const SlideList = [
     {
         textPosition: 'text-center',
         category: '',
-        title: 'AI Nomads',
-        description: 'Take Control of your dsfsdfsdfsdf Footprint. Everywhere you go',
+        title: 'Nomads Marketplace',
+        description: 'Take control of your digital content. Use NFT(non-fungible-tokens) to display, sell and trade your art, music and more.',
+        descriptionTwo: 'On Your Terms',
         buttonText: 'Contact Us',
         buttonLink: '/contact'
     }
@@ -130,29 +131,29 @@ class HomePortfolio extends Component {
                 <Header />
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
-                    <div className="frame-layout__particles">
-                        <Particles
-                            params={{
-                                "particles": {
-                                    "number": {
-                                        "value": 150
+                        <div className="frame-layout__particles">
+                            <Particles
+                                params={{
+                                    "particles": {
+                                        "number": {
+                                            "value": 150
+                                        },
+                                        "size": {
+                                            "value": 3
+                                        }
                                     },
-                                    "size": {
-                                        "value": 3
-                                    }
-                                },
-                                "interactivity": {
-                                    "events": {
-                                        "onhover": {
-                                            "enable": true,
-                                            "mode": "repulse"
+                                    "interactivity": {
+                                        "events": {
+                                            "onhover": {
+                                                "enable": true,
+                                                "mode": "repulse"
+                                            }
                                         }
                                     }
-                                }
-                            }}
-                        />
-                    </div>
-                    <div className="im_modern_slider bg_image bg_image--7 ">
+                                }}
+                            />
+                        </div>
+                    <div className="im_modern_slider bg_image bg_image--6 ">
                         {SlideList.map((value, index) => (
                             <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
                                 <div className="container">
@@ -162,8 +163,9 @@ class HomePortfolio extends Component {
                                                 {value.category ? <span>{value.category}</span> : ''}
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
+                                                {value.descriptionTwo ? <p className="text-white ">{value.descriptionTwo}</p> : ''}
                                                 {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
-                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Contact Us</a></div> : ''}
+                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Explore</a></div> : ''}
                                             </div>
                                         </div>
                                     </div>
