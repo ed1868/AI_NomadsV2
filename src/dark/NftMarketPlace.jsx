@@ -30,11 +30,14 @@ import {
 } from "react-icons/fi";
 
 
+
+
+
 const SlideList = [
     {
         textPosition: 'text-center',
         category: '',
-        title: 'Nomads Marketplace',
+        title: `Nomad NFT's`,
         description: 'Take control of your digital content. Use NFT(non-fungible-tokens) to display, sell and trade your art, music and more.',
         descriptionTwo: 'On Your Terms',
         buttonText: 'Contact Us',
@@ -88,17 +91,17 @@ const featureList = [
 const ServiceList = [
     {
         icon: <FiActivity />,
-        title: 'Fast Performance',
-        description: 'Optimized for a smaller build size, faster dev compilation and dozens of other improvements.'
+        title: 'Download CryptoWallet',
+        description: 'There are many crypto wallets that let you operate Ethereum based Dapps. Our favorite one is Metamask. '
     },
     {
         icon: <FiCast />,
-        title: 'Perfect Responsive',
+        title: 'Browse Marketplace',
         description: 'Our web and mobile apps are perfect for all devices. You can visit and share from any screen.'
     },
     {
         icon: <FiMap />,
-        title: 'Fast & Friendly Support',
+        title: `Create, Sell or Buy NFT's`,
         description: 'We are provide 24 hours support for all clients.Every customer has their personal agent.'
     },
 ]
@@ -163,7 +166,7 @@ class HomePortfolio extends Component {
                                                 {value.category ? <span>{value.category}</span> : ''}
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
-                                                {value.descriptionTwo ? <p className="text-white ">{value.descriptionTwo}</p> : ''}
+                                                {value.descriptionTwo ? <p className="text-white theme-gradient ">{value.descriptionTwo}</p> : ''}
                                                 {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
                                                 {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Explore</a></div> : ''}
                                             </div>
@@ -179,7 +182,17 @@ class HomePortfolio extends Component {
 
                 {/* Start Service Area */}
                 <div className="service-wrapper service-white pt-5 pb-5">
-                    <div className="row row--25">
+                <div className="row pt-3">
+                            <div className="col-lg-12">
+                                <div className="section-title text-center mb--30">
+                                    <span className="subtitle">Create, Sell or Buy Safely through Blockchain</span>
+                                    <br></br>
+                                    <h2 className="title theme-gradient">Be part of the expanding blockchain ecosystem</h2>
+                     
+                                </div>
+                            </div>
+                        </div>
+                    <div className="row row--25 pt-5">
                         {ServiceList.map((val, i) => (
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                                 <div className="service service__style--1">
