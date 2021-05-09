@@ -97,12 +97,12 @@ const ServiceList = [
     {
         icon: <FiCast />,
         title: 'Browse Marketplace',
-        description: 'Our web and mobile apps are perfect for all devices. You can visit and share from any screen.'
+        description: 'Explore our array of collections of digital art. Filter by catagories and discover new art from our +1000 creators.'
     },
     {
         icon: <FiMap />,
         title: `Create, Sell or Buy NFT's`,
-        description: 'We are provide 24 hours support for all clients.Every customer has their personal agent.'
+        description: 'Create a collection of your digital art, launch it for the world to see!'
     },
 ]
 
@@ -265,13 +265,13 @@ class NftMarketPlace extends Component {
                         <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Digital Art</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"}/>
                         </div>
                         <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Crypto Scriptures</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"scriptures"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"}/>
                         </div>
                         {/* <div className="row">
                             <div className="col-md-12">
