@@ -215,7 +215,7 @@ class NftMarketPlace extends Component {
                 <Helmet pageTitle="Nomad NFT Marketplace" />
 
                 {/* Start Header Area  */}
-                <Header />
+                <Header account={this.state.account}/>
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">

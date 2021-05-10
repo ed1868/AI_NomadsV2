@@ -129,7 +129,7 @@ class Header extends Component {
 
                                     <li><Link to="/team">Team</Link></li>
                                     <li><Link to="/contact" >Contact</Link></li>
-                                    <li ><Link id="accountNumber" to="/nomadNft" >{account}</Link></li>
+                                    <li ><Link id="accountNumber" className="theme-gradient" to="/nomadNft" >{account}</Link></li>
 
                                 </ul>
                             </nav>
