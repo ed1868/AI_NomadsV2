@@ -10,6 +10,7 @@ import ProgressTwo from "../blocks/progressbar/ProgressTwo";
 import ServiceTwo from "../elements/service/ServiceTwo";
 import Particles from 'react-particles-js';
 import { FiActivity, FiCast, FiMap } from "react-icons/fi";
+import Web3 from 'web3';
 import { Widget } from 'react-chat-widget';
 
 import 'react-chat-widget/lib/styles.css';
@@ -104,13 +105,54 @@ const ServiceList = [
 
 
 class HomePortfolio extends Component {
+    async componentWillMount() {
+        await this.loadWeb3()
+        await this.loadBlockchainData()
+      }
+
     constructor() {
         super()
         this.state = {
-            isOpen: false
+            isOpen: false,
+            
         }
         this.openModal = this.openModal.bind(this)
     }
+
+
+      async loadWeb3() {
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum)
+          await window.ethereum.enable()
+        }
+        else if (window.web3) {
+          window.web3 = new Web3(window.web3.currentProvider)
+        }
+        else {
+          window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
+          this.setState({ preview: true });
+          this.setState({ loading: false });
+        }
+      }
+      
+
+      async loadBlockchainData() {
+        const web3 = window.web3
+        if (web3 == undefined) {
+          this.setState({ preview: true });
+          this.setState({ loading: false });
+          return;
+        }
+        // Load account
+        const accounts = await web3.eth.getAccounts()
+    
+        console.log(`THESE ARE THE ACCOUNTS : ${accounts}`);
+        this.setState({ account: accounts[0] })
+     
+    
+      }
+
+
     openModal() {
         this.setState({ isOpen: true })
     }
@@ -127,7 +169,7 @@ class HomePortfolio extends Component {
                 <Helmet pageTitle="Home Portfolio" />
 
                 {/* Start Header Area  */}
-                <Header />
+                <Header account={this.state.account} />
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">
