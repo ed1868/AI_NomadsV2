@@ -129,7 +129,7 @@ class HomePortfolio extends Component {
           window.web3 = new Web3(window.web3.currentProvider)
         }
         else {
-          window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
+        //   window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
           this.setState({ preview: true });
           this.setState({ loading: false });
         }
@@ -169,7 +169,7 @@ class HomePortfolio extends Component {
                 <Helmet pageTitle="Home Portfolio" />
 
                 {/* Start Header Area  */}
-                <Header account={this.state.account} />
+                <Header  />
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">
