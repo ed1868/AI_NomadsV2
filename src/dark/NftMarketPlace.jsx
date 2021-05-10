@@ -20,7 +20,10 @@ import 'react-chat-widget/lib/styles.css';
 
 import {
     FaReact,
-    FaSass
+    FaSass,
+    FaFootballBall,
+    FaInstagram,
+    FaGamepad
 } from "react-icons/fa";
 import {
     FiSmartphone,
@@ -29,7 +32,12 @@ import {
     FiCommand,
     FiHeadphones,
     FiBold,
-    FiChevronUp
+    FiChevronUp,
+    FiMusic,
+    FiBookOpen,
+    FiPenTool,
+    FiWifi,
+    FiTwitch,
 } from "react-icons/fi";
 
 
@@ -49,45 +57,46 @@ const SlideList = [
 ]
 
 const featureList = [
+  
     {
-        icon: <FaReact />,
+        icon: <FiPenTool />,
         title: 'Digital Art',
-        subtitle: 'We use the latest React framework version for a clean user friendly interface. '
+        subtitle: 'Sell or Buy Digital Art. Get paid to be as creative as you can be. '
     },
     {
-        icon: <FiSmartphone />,
+        icon: <FiBookOpen />,
         title: 'Literature',
-        subtitle: 'Our apps and websites are Perfect for all devices.'
+        subtitle: `Poems, Books and Screenplay can now be NFT's. This gives a whole new meaning to author editions and authenticity.`
     },
     {
-        icon: <FiCode />,
+        icon: <FiMusic />,
         title: 'Music',
-        subtitle: 'We have implemented Ethreum protocols with Solidity and Web3.js to give our clients a head start on blockchain technology.'
+        subtitle: 'Artist are now able to be their own record label. NFT songs and albums can cut out the music industries middle man and give ultimate power to the artist over their work. Blockchain also gives total transparancy to see who is really hot or not. Popularity can not be bought, only earned.'
     },
     {
-        icon: <FaSass />,
+        icon: <FaFootballBall />,
         title: 'Sports',
-        subtitle: 'We use Sass in every project to give logic to our styles.'
+        subtitle: `Sports cards are now available as NFT's. Trade your most vaulable cards or create a whole set of cards for users to buy.`
     },
     {
-        icon: <FiDownload />,
+        icon: <FaInstagram />,
         title: 'Social Media',
-        subtitle: 'Our team is fast. Our Artificial Intelligence models? Even Faster '
+        subtitle: `Give a new meaning to your data. Redefine every social media post to be bought, tipped and certified by Ethereum Blockchain.`
     },
     {
         icon: <FiCommand />,
         title: 'Smart Contracts',
-        subtitle: 'AI Nomads is a modern creative team that doesnt get with the times. It goes beyond them.'
+        subtitle: `With Smart Contracts you can define the terms of your NFT's. Royalties, subscriptions and other features will be rolled out and backed by Chainlink Smart Contracts.`
     },
     {
-        icon: <FiHeadphones />,
+        icon: <FiWifi />,
         title: 'Domains',
-        subtitle: 'We provide 24 hour support for all clients. We are one click away.'
+        subtitle: 'Ethereum is a whole new space for people to share, create and publish DAPPS. Each one needs a domain. You can buy, sell or trade Domains.'
     },
     {
-        icon: <FiBold />,
+        icon: <FaGamepad />,
         title: 'Gaming',
-        subtitle: 'With blockchain we intergrate payment systems like Bitcoin and other Alt Coins.'
+        subtitle: `Build a DAPP game? Use NFT's to create a whole user experience where skins, game songs and packages are only the tip of the iceberg.`
     }
 ]
 
