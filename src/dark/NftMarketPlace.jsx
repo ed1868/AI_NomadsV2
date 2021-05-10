@@ -1,4 +1,5 @@
 import React, { Component, Fragment, useEffect } from "react";
+import CryptoScripture from '../abis/CryptoScripture.json'
 import ScrollToTop from 'react-scroll-up';
 import PortfolioNft from "../elements/portfolio/PortfolioNft";
 import Header from "../component/header/Header";
@@ -11,6 +12,8 @@ import ServiceTwo from "../elements/service/ServiceTwo";
 import Particles from 'react-particles-js';
 import { FiActivity, FiCast, FiMap } from "react-icons/fi";
 import { Widget } from 'react-chat-widget';
+import Web3 from 'web3';
+
 
 import 'react-chat-widget/lib/styles.css';
 
@@ -108,6 +111,77 @@ const ServiceList = [
 
 
 class NftMarketPlace extends Component {
+
+    async componentWillMount() {
+        await this.loadWeb3()
+        await this.loadBlockchainData()
+      }
+
+      async loadWeb3() {
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum)
+          await window.ethereum.enable()
+        }
+        else if (window.web3) {
+          window.web3 = new Web3(window.web3.currentProvider)
+        }
+        else {
+          window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
+          this.setState({ preview: true });
+          this.setState({ loading: false });
+        }
+      }
+      
+
+      async loadBlockchainData() {
+        const web3 = window.web3
+        if (web3 == undefined) {
+          this.setState({ preview: true });
+          this.setState({ loading: false });
+          return;
+        }
+        // Load account
+        const accounts = await web3.eth.getAccounts()
+    
+        console.log(`THESE ARE THE ACCOUNTS : ${accounts}`);
+        this.setState({ account: accounts[0] })
+        // Network ID
+        const networkId = await web3.eth.net.getId()
+        const networkData = CryptoScripture.networks[networkId]
+        if (networkData) {
+          const cryptoScripture = new web3.eth.Contract(CryptoScripture.abi, networkData.address)
+          this.setState({ cryptoScripture })
+          const scriptureCount = await cryptoScripture.methods.scripturesCount().call()
+          this.setState({ scriptureCount })
+          // Load scriptures
+          for (var i = 1; i <= scriptureCount; i++) {
+            const scripture = await cryptoScripture.methods.scriptures(i).call()
+            this.setState({
+              scriptures: [...this.state.scriptures, scripture]
+            })
+          }
+    
+    
+          // Sort scriptures. Show highest tipped scriptures first
+          this.setState({
+            scriptures: this.state.scriptures.sort((a, b) => b.tipAmount - a.tipAmount)
+          })
+          this.setState({ loading: false })
+    
+        } else {
+          window.alert(' AI Nomads contract not deployed to detected Blockchain network.');
+        }
+    
+    
+        // SET Top 5 SCRIPTURES
+    if(this.state.scriptures){
+        this.setState({
+            top5scriptures: this.state.scriptures.slice(0, 5)
+          });
+    }
+     
+    
+      }
     constructor() {
         super()
         this.state = {
