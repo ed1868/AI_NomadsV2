@@ -217,8 +217,13 @@
         .service.service__style--2 .content p {
             color: #ffffff;
         }
+        #accountNumber{
+            font-size: 11px;
+            // color: red !important;
+        }
         .header-area .header-wrapper .mainmenunav ul.mainmenu li a  {
             color: #ffffff;
+            
         }
         .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown>a::after {
             border-color: #ffffff transparent transparent transparent;
