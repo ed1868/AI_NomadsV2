@@ -57,7 +57,7 @@ const SlideList = [
 ]
 
 const featureList = [
-  
+
     {
         icon: <FiPenTool />,
         title: 'Digital Art',
@@ -124,80 +124,104 @@ class NftMarketPlace extends Component {
     async componentWillMount() {
         await this.loadWeb3()
         await this.loadBlockchainData()
-      }
+    }
 
-      async loadWeb3() {
+    async loadWeb3() {
         if (window.ethereum) {
-          window.web3 = new Web3(window.ethereum)
-          await window.ethereum.enable()
+            window.web3 = new Web3(window.ethereum)
+            await window.ethereum.enable()
         }
         else if (window.web3) {
-          window.web3 = new Web3(window.web3.currentProvider)
+            window.web3 = new Web3(window.web3.currentProvider)
         }
         else {
-          window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
-          this.setState({ preview: true });
-          this.setState({ loading: false });
+            window.alert('Non-Ethereum browser detected. You should consider downloading and connecting a hardwallet like Metamask!');
+            this.setState({ preview: true });
+            this.setState({ loading: false });
         }
-      }
-      
+    }
 
-      async loadBlockchainData() {
+
+    async loadBlockchainData() {
         const web3 = window.web3
         if (web3 == undefined) {
-          this.setState({ preview: true });
-          this.setState({ loading: false });
-          return;
+            this.setState({ preview: true });
+            this.setState({ loading: false });
+            return;
         }
         // Load account
         const accounts = await web3.eth.getAccounts()
-    
+
         console.log(`THESE ARE THE ACCOUNTS : ${accounts}`);
         this.setState({ account: accounts[0] })
         // Network ID
         const networkId = await web3.eth.net.getId()
         const networkData = CryptoScripture.networks[networkId]
         if (networkData) {
-          const cryptoScripture = new web3.eth.Contract(CryptoScripture.abi, networkData.address)
-          this.setState({ cryptoScripture })
-          const scriptureCount = await cryptoScripture.methods.scripturesCount().call()
-          this.setState({ scriptureCount })
-          // Load scriptures
-          for (var i = 1; i <= scriptureCount; i++) {
-            const scripture = await cryptoScripture.methods.scriptures(i).call()
+            const cryptoScripture = new web3.eth.Contract(CryptoScripture.abi, networkData.address)
+            this.setState({ cryptoScripture })
+            const scriptureCount = await cryptoScripture.methods.scripturesCount().call()
+            this.setState({ scriptureCount })
+            // Load scriptures
+            for (var i = 1; i <= scriptureCount; i++) {
+                const scripture = await cryptoScripture.methods.scriptures(i).call()
+                this.setState({
+                    scriptures: [...this.state.scriptures, scripture]
+                })
+            }
+
+
+            // Sort scriptures. Show highest tipped scriptures first
             this.setState({
-              scriptures: [...this.state.scriptures, scripture]
+                scriptures: this.state.scriptures.sort((a, b) => b.tipAmount - a.tipAmount)
             })
-          }
-    
-    
-          // Sort scriptures. Show highest tipped scriptures first
-          this.setState({
-            scriptures: this.state.scriptures.sort((a, b) => b.tipAmount - a.tipAmount)
-          })
-          this.setState({ loading: false })
-    
+            this.setState({ loading: false })
+
         } else {
-          window.alert(' AI Nomads contract not deployed to detected Blockchain network.');
+            window.alert(' AI Nomads contract not deployed to detected Blockchain network.');
         }
-    
-    
+
+
         // SET Top 5 SCRIPTURES
-    if(this.state.scriptures){
-        this.setState({
-            top5scriptures: this.state.scriptures.slice(0, 5)
-          });
+        if (this.state.scriptures) {
+            this.setState({
+                top5scriptures: this.state.scriptures.slice(0, 5)
+            });
+        }
+
+
     }
-     
-    
-      }
+
+
+
+    buyNftFromOwner(id, tipAmount) {
+        console.log('User is attempting to buy NFT :');
+        // console.log(`USER ID : ${id}`);
+        // console.log(`Tip amount : ${tipAmount}`);
+        // this.setState({ loading: true })
+        // this.state.cryptoScripture.methods.tipScriptureOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+        //   this.setState({ loading: false });
+        // })
+        //   .then(err => {
+        //     if (err) {
+        //       console.log('THE ERROR IS : ', err);
+        //     }
+
+        //     window.location.reload(true);
+        //   })
+
+    }
+
+
     constructor() {
         super()
         this.state = {
             isOpen: false,
-            nft:true
+            nft: true
         }
         this.openModal = this.openModal.bind(this)
+
+        this.tipImageOwner = this.tipImageOwner.bind(this)
     }
     openModal() {
         this.setState({ isOpen: true })
@@ -215,7 +239,7 @@ class NftMarketPlace extends Component {
                 <Helmet pageTitle="Nomad NFT Marketplace" />
 
                 {/* Start Header Area  */}
-                <Header account={this.state.account}/>
+                <Header account={this.state.account} />
                 {/* End Header Area  */}
                 <div className="slider-activation slider-creative-agency with-particles" id="home">
                     <div className="frame-layout__particles">
@@ -336,25 +360,25 @@ class NftMarketPlace extends Component {
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <p className="theme-gradient text-left">Top Rated</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} />
                         </div>
                         <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                            <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">New Collections</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"} />
                         </div>
                         <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                            <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Digital Art</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} />
                         </div>
                         <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
+                            <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Crypto Scriptures</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"}/>
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"} />
                         </div>
                         {/* <div className="row">
                             <div className="col-md-12">
