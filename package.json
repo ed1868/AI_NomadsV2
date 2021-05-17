@@ -171,5 +171,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "supertest": "^6.1.3"
   }
 }

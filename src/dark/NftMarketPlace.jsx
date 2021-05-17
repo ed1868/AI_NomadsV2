@@ -221,7 +221,7 @@ class NftMarketPlace extends Component {
         }
         this.openModal = this.openModal.bind(this)
 
-        this.tipImageOwner = this.tipImageOwner.bind(this)
+        this.buyNftFromOwner = this.buyNftFromOwner.bind(this)
     }
     openModal() {
         this.setState({ isOpen: true })
