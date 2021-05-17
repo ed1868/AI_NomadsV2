@@ -30,7 +30,7 @@ const topRated = [
     {
         // image: Portfolio_image,
         image: nftOne,
-        price: '1.05',
+        price: '25555500',
         coin: 'ETH',
         category: 'NomadToms',
         title: 'NomadTom #1',
@@ -40,7 +40,7 @@ const topRated = [
     {
         // image: Portfolio_image2,
         image: nftTwo,
-        price: '0.05',
+        price: '698',
         coin: 'ETH',
         category: 'NomadToms',
         title: 'NomadTom #2',
@@ -50,7 +50,7 @@ const topRated = [
     {
         // image: Portfolio_image3,
         image: nftThree,
-        price: '3.00',
+        price: '3000',
         coin: 'ETH',
         category: 'NomadToms',
         title: 'NomadTom #3',
@@ -60,7 +60,7 @@ const topRated = [
     {
         image: nftFour,
         // image: Portfolio_image4,
-        price: '4',
+        price: '400000000',
         coin: 'ETH',
         category: 'NomadToms',
         title: 'NomadTom #4',
@@ -187,7 +187,7 @@ const digitalArt = [
     },
     {
         image: nftEight,
-        price: '23',
+        price: '4658',
         coin: 'ETH',
         category: 'NomadToms',
         title: 'NomadTom #4',
@@ -263,7 +263,7 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
-                                            <p className="text-white">Current Bid: <span className="theme-gradient">{value.price} {value.coin}</span></p>
+                                            <p className="text-white">Current Bid: <span className="theme-gradient">{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>
                                         <div className="portfolio_hover">
@@ -352,7 +352,7 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
-                                            <p className="text-white">Current Bid: <span className="theme-gradient">{value.price} {value.coin}</span></p>
+                                            <p className="text-white">Current Bid: <span className="theme-gradient">{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>
                                         <div className="portfolio_hover">
@@ -398,7 +398,7 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
-                                            <p className="text-white">Current Bid: <span className="theme-gradient">{value.price} {value.coin}</span></p>
+                                            <p className="text-white">Current Bid: <span className="theme-gradient">{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>
                                         <div className="portfolio_hover">
