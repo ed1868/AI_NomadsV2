@@ -196,6 +196,27 @@ class NftMarketPlace extends Component {
 
     buyNftFromOwner(id, tipAmount) {
         console.log('User is attempting to buy NFT :');
+        // <strong>Price: {window.web3.utils.fromWei(props.scriptures.tipAmount.toString(), 'Ether')} ETH</strong>
+
+
+
+
+        //         <button
+        //         className="btn btn-link btn-sm float-right pt-0"
+        //         name={props.scriptures.id}
+        //         onClick={(event) => {
+
+        //             let tipAmount = window.web3.utils.toWei('1', 'Ether')
+        //             console.log(event.target.name, tipAmount)
+        //             props.tipImageOwner(event.target.name, tipAmount)
+        //         }}
+        //     >
+        //         TIP 0.1 ETH
+        // </button>
+
+
+
+
         // console.log(`USER ID : ${id}`);
         // console.log(`Tip amount : ${tipAmount}`);
         // this.setState({ loading: true })
@@ -360,25 +381,25 @@ class NftMarketPlace extends Component {
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <p className="theme-gradient text-left">Top Rated</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">New Collections</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"} buyNftFromOwner={this.buyNftFromOwner} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Digital Art</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Crypto Scriptures</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"} buyNftFromOwner={this.buyNftFromOwner} />
                         </div>
                         {/* <div className="row">
                             <div className="col-md-12">
