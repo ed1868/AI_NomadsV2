@@ -6,7 +6,7 @@ contract NomadNft {
     string public name = "Nomad NFT";
 
     // TO GO ON NOMAD NFT IF NEEDED {
-    // uint256 public timestamp = block.timestamp;
+    uint256 public timestamp = block.timestamp;
     // uint timestamp;
     // }
 
@@ -24,7 +24,6 @@ contract NomadNft {
         string date;
         string collectionName;
         uint256 tipAmount;
-        string transanctionHistory;
         address payable author;
     }
 
@@ -36,7 +35,6 @@ contract NomadNft {
         string date,
         string collectionName,
         uint256 tipAmount,
-        string transanctionHistory,
         address payable author
     );
 
@@ -48,7 +46,6 @@ contract NomadNft {
         string date,
         string collectionName,
         uint256 tipAmount,
-        string transanctionHistory,
         address payable author
     );
 
@@ -84,8 +81,7 @@ contract NomadNft {
             _date,
             _collectionName,
             0,
-            msg.sender,
-            block.timestamp
+            msg.sender
         );
 
         // TRIGGER ON EVENT
@@ -97,12 +93,11 @@ contract NomadNft {
             _date,
             _collectionName,
             0,
-            msg.sender,
-            block.timestamp
+            msg.sender
         );
     }
 
-    // PAY NFT OWNER 
+    // PAY NFT OWNER
 
     function payNftOwner(uint256 _id) public payable {
         //MAKE SURE ID IS VALID
@@ -136,8 +131,7 @@ contract NomadNft {
             _nft.date,
             _nft.collectionName,
             _nft.tipAmount,
-            _author,
-            block.timestamp
+            _author
         );
 
         // emit ScriptureTipped(_id, hash, title, text, tipAmount, author);x

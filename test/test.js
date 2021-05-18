@@ -60,7 +60,7 @@ contract('CryptoScripture', ([deployer, author, tipper]) => {
         assert.equal(event.hash, hash, 'Hash is correct')
         assert.equal(event.text, 'If all I wanted to do is sit and talk to you. Would you listen?', 'Text is correct')
         assert.equal(event.title, 'If', 'Title is correct');
-        assert.equal(event.date,newDate , 'should be a date');
+        assert.equal(event.date, newDate, 'should be a date');
         assert.equal(event.tipAmount, '0', 'tip amount is correct')
         assert.equal(event.author, author, 'author is correct')
         // assert.equal(event.timestamp, event.timestamp, 'It should not be empty')
