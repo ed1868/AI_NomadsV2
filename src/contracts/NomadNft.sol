@@ -134,6 +134,6 @@ contract NomadNft {
             _author
         );
 
-        // emit ScriptureTipped(_id, hash, title, text, tipAmount, author);x
+        // emit ScriptureTipped(_id, hash, title, text, tipAmount, author);
     }
 }

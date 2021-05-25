@@ -1,5 +1,6 @@
 import React, { Component, Fragment, useEffect } from "react";
 import CryptoScripture from '../abis/CryptoScripture.json'
+import NomadNft from '../abis/NomadNft.json';
 import ScrollToTop from 'react-scroll-up';
 import PortfolioNft from "../elements/portfolio/PortfolioNft";
 import Header from "../component/header/Header";
@@ -156,26 +157,27 @@ class NftMarketPlace extends Component {
         this.setState({ account: accounts[0] })
         // Network ID
         const networkId = await web3.eth.net.getId()
-        const networkData = CryptoScripture.networks[networkId]
+        const networkData = NomadNft.networks[networkId]
+        console.log('NETWORK DATA : ', networkData );
         if (networkData) {
-            const cryptoScripture = new web3.eth.Contract(CryptoScripture.abi, networkData.address)
-            this.setState({ cryptoScripture })
-            const scriptureCount = await cryptoScripture.methods.scripturesCount().call()
-            this.setState({ scriptureCount })
+            const nomadNft = new web3.eth.Contract(NomadNft.abi, networkData.address)
+            this.setState({ nomadNft })
+            const nomadNftcount = await nomadNft.methods.nomadNftcount().call()
+            this.setState({ nomadNftcount })
             // Load scriptures
-            for (var i = 1; i <= scriptureCount; i++) {
-                const scripture = await cryptoScripture.methods.scriptures(i).call()
+            for (var i = 1; i <= nomadNftcount; i++) {
+                const nft = await nomadNft.methods.nfts(i).call()
                 this.setState({
-                    scriptures: [...this.state.scriptures, scripture]
+                    nfts: [...this.state.nfts, nft]
                 })
             }
 
 
             // Sort scriptures. Show highest tipped scriptures first
-            this.setState({
-                scriptures: this.state.scriptures.sort((a, b) => b.tipAmount - a.tipAmount)
-            })
-            this.setState({ loading: false })
+            // this.setState({
+            //     scriptures: this.state.scriptures.sort((a, b) => b.tipAmount - a.tipAmount)
+            // })
+            // this.setState({ loading: false })
 
         } else {
             window.alert(' AI Nomads contract not deployed to detected Blockchain network.');
@@ -183,11 +185,11 @@ class NftMarketPlace extends Component {
 
 
         // SET Top 5 SCRIPTURES
-        if (this.state.scriptures) {
-            this.setState({
-                top5scriptures: this.state.scriptures.slice(0, 5)
-            });
-        }
+        // if (this.state.scriptures) {
+        //     this.setState({
+        //         top5scriptures: this.state.scriptures.slice(0, 5)
+        //     });
+        // }
 
 
     }
