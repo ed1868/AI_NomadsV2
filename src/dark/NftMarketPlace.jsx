@@ -26,6 +26,7 @@ import {
     FaInstagram,
     FaGamepad
 } from "react-icons/fa";
+
 import {
     FiSmartphone,
     FiCode,
@@ -158,7 +159,7 @@ class NftMarketPlace extends Component {
         // Network ID
         const networkId = await web3.eth.net.getId()
         const networkData = NomadNft.networks[networkId]
-        console.log('NETWORK DATA : ', networkData );
+        console.log('NETWORK DATA : ', networkData);
         if (networkData) {
             const nomadNft = new web3.eth.Contract(NomadNft.abi, networkData.address)
             this.setState({ nomadNft })
@@ -167,6 +168,7 @@ class NftMarketPlace extends Component {
             // Load scriptures
             for (var i = 1; i <= nomadNftcount; i++) {
                 const nft = await nomadNft.methods.nfts(i).call()
+                console.log('THIS IS THE SINGLE NFT DATA : ', nft);
                 this.setState({
                     nfts: [...this.state.nfts, nft]
                 })

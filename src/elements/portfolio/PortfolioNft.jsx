@@ -224,6 +224,46 @@ const cryptoScripture = [
 ]
 
 class PortfolioNft extends Component {
+    buyNftFromOwner(id, tipAmount) {
+        console.log('User is attempting to buy NFT :');
+        console.table(id, tipAmount);
+        // <strong>Price: {window.web3.utils.fromWei(props.scriptures.tipAmount.toString(), 'Ether')} ETH</strong>
+
+
+
+
+        //         <button
+        //         className="btn btn-link btn-sm float-right pt-0"
+        //         name={props.scriptures.id}
+        //         onClick={(event) => {
+
+        //             let tipAmount = window.web3.utils.toWei('1', 'Ether')
+        //             console.log(event.target.name, tipAmount)
+        //             props.tipImageOwner(event.target.name, tipAmount)
+        //         }}
+        //     >
+        //         TIP 0.1 ETH
+        // </button>
+
+
+
+
+        // console.log(`USER ID : ${id}`);
+        // console.log(`Tip amount : ${tipAmount}`);
+        // this.setState({ loading: true })
+        // this.state.cryptoScripture.methods.tipScriptureOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+        //   this.setState({ loading: false });
+        // })
+        //   .then(err => {
+        //     if (err) {
+        //       console.log('THE ERROR IS : ', err);
+        //     }
+
+        //     window.location.reload(true);
+        //   })
+
+    }
+
     constructor(props) {
         super(props)
         this.state = {
@@ -232,7 +272,7 @@ class PortfolioNft extends Component {
         }
 
 
-        // this.buyNftFromOwner = this.buyNftFromOwner.bind(this)
+        this.buyNftFromOwner = this.buyNftFromOwner.bind(this)
     }
 
     render() {
@@ -307,7 +347,9 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
-                                            <p className="text-white">Current Bid: <span className="theme-gradient">{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
+                                                <p className="text-white">Current Bid: <span className="theme-gradient" onClick={(event) => {
+                                                let tipAmount = window.web3.utils.toWei('2', 'Ether')
+                                            }} name={this.props.nft.id} >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>
                                         <div className="portfolio_hover">
@@ -321,9 +363,10 @@ class PortfolioNft extends Component {
                                 {/* <Link className="transparent_link" to="/portfolio-details"></Link> */}
                             </div>
                         </div>
-                    ))}
+                    ))
+                    }
 
-                </React.Fragment>
+                </React.Fragment >
             )
         }
         else if (this.props.catergory == "digitalArt") {
