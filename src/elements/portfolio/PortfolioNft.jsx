@@ -349,7 +349,9 @@ class PortfolioNft extends Component {
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
                                                 <p className="text-white">Current Bid: <span className="theme-gradient" onClick={(event) => {
                                                 let tipAmount = window.web3.utils.toWei('2', 'Ether')
-                                            }} name={this.props.nft.id} >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
+
+                                                this.buyNftFromOwner('skdhjhsfk')
+                                            }} name={this.props.nft.id} >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETHHHHH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>
                                         <div className="portfolio_hover">
