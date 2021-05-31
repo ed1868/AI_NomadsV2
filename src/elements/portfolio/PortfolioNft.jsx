@@ -224,9 +224,13 @@ const cryptoScripture = [
 ]
 
 class PortfolioNft extends Component {
-    buyNftFromOwner(id, tipAmount) {
+    buyNftFromOwner(event, tipAmount) {
+        event.preventDefault();
         console.log('User is attempting to buy NFT :');
-        console.table(id, tipAmount);
+        let nftId=event.target.name;
+        console.log('NFT ID : ', nftId);
+        console.log('TIP AMMOUNT ', tipAmount);
+        
         // <strong>Price: {window.web3.utils.fromWei(props.scriptures.tipAmount.toString(), 'Ether')} ETH</strong>
 
 
@@ -346,13 +350,16 @@ class PortfolioNft extends Component {
                                                 <Link to="/#">{value.category}</Link>
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
-                                            <h4 className="title"><Link to="/#">{value.title}</Link></h4>
-                                                <p className="text-white">Current Bid: <span className="theme-gradient" onClick={(event) => {
-                                                let tipAmount = window.web3.utils.toWei('2', 'Ether')
-
-                                                this.buyNftFromOwner('skdhjhsfk')
-                                            }} name={this.props.nft.id} >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETHHHHH</span></p>
+                                            <h4 className="title">{value.title}</h4>
+                                            <p className="text-white">Current Bid: <span className="theme-gradient" >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} nah nah</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
+                                            <Link to="#" id="buyButton" name="EddiesTick" className="theme-gradient" onClick={(event) => {
+                                                let tipAmount = window.web3.utils.toWei('2', 'Ether')
+                                                
+                                                this.buyNftFromOwner(event,tipAmount);
+                                            }} >
+                                                Buy
+                                             </Link>
                                         </div>
                                         <div className="portfolio_hover">
 
@@ -361,7 +368,7 @@ class PortfolioNft extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <Link className="transparent_link" to="/#"></Link>
+                                {/* <Link className="transparent_link" ></Link> */}
                                 {/* <Link className="transparent_link" to="/portfolio-details"></Link> */}
                             </div>
                         </div>

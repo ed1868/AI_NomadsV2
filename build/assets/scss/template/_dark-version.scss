@@ -178,6 +178,9 @@
 .contractAddress{
     font-size: 11px !important;
 }
+#buyButton:hover {
+    color:black !important;
+}
     @media #{$md-layout} {
         .header-style-two .humberger-menu span.text-white {
             color: #c6c9d8 !important;
