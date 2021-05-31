@@ -230,7 +230,7 @@ class PortfolioNft extends Component {
         let nftId=event.target.name;
         console.log('NFT ID : ', nftId);
         console.log('TIP AMMOUNT ', tipAmount);
-        
+
         // <strong>Price: {window.web3.utils.fromWei(props.scriptures.tipAmount.toString(), 'Ether')} ETH</strong>
 
 
@@ -351,7 +351,7 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title">{value.title}</h4>
-                                            <p className="text-white">Current Bid: <span className="theme-gradient" >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} nah nah</span></p>
+                                            <p className="text-white">Current Bid: <span className="theme-gradient" >{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                             <Link to="#" id="buyButton" name="EddiesTick" className="theme-gradient" onClick={(event) => {
                                                 let tipAmount = window.web3.utils.toWei('2', 'Ether')
