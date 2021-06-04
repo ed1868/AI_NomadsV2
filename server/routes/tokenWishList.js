@@ -2,7 +2,6 @@ const express = require('express')
 const passport = require('passport')
 const router = express.Router()
 const TokenWaitList = require('../models/TokenWaitList');
-const Message = require('../models/Message');
 const { IgnorePlugin } = require('webpack');
 
 const bcrypt = require('bcrypt')
@@ -25,12 +24,16 @@ const transporter = nodemailer.createTransport({
 let emailSender = (emailData) => {
 
     let email = emailData.email;
-    let subject = emailData.subject;
-    let text = emailData.text;
+    let firstName = emailData.firstName;
+    let subject = "please verify your email address";
+    let text = `
+    Hey ${firstName} ,
+    
+    Please confirm that you want to use this as your NOMA Token Crypto account email address. Once it’s done, you’ll be on the waitlist!`
 
 
     transporter.sendMail({
-        from: '"Theo Calderon Wants You to Confirm" <myawesome@project.com>',
+        from: '"Action required – please verify your email address" <myawesome@project.com>',
         to: email,
         subject: subject,
         text: text,
@@ -102,7 +105,7 @@ router.post('/request', (req, res, next) => {
                     email, subject, text
                 }
                 emailSender(emailPayload);
-               return  res.status(200).json({ message: "did a whole succesfull loop" });
+                return res.status(200).json({ message: "did a whole succesfull loop" });
             }).catch(err => {
                 if (err) {
                     console.log('TENGO UN ERROR ', err
@@ -115,7 +118,7 @@ router.post('/request', (req, res, next) => {
             const salt = bcrypt.genSaltSync(bcryptSalt)
             const hashPass = bcrypt.hashSync(password, salt)
             const newUser = new User({
-                username : name, password: hashPass, phone, email, messages: {
+                username: name, password: hashPass, phone, email, messages: {
                     subject, text
 
                 }
@@ -124,7 +127,7 @@ router.post('/request', (req, res, next) => {
         }
 
     }).then(userSaved => {
-        if(userSaved){
+        if (userSaved) {
             console.log("USER SAVED: ", userSaved);
             let newUserEmailPayload = {
                 email, subject, text
@@ -132,7 +135,7 @@ router.post('/request', (req, res, next) => {
             emailSender(newUserEmailPayload);
             res.status(200).json({ message: "did a whole succesfull loop" });
         }
-        
+
     }).catch(err => {
         if (err) {
             console.log('ERROR : ', err);
