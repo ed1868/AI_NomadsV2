@@ -307,6 +307,7 @@ class PortfolioNft extends Component {
                                                 {/* <Link to="/portfolio-details">{value.category}</Link> */}
                                             </div>
                                             <h4 className="title"><Link to="/#">{value.title}</Link></h4>
+                                            
                                             <p className="text-white">Current Bid: <span className="theme-gradient">{window.web3.utils.fromWei(value.price.toString(), 'Ether')} ETH</span></p>
                                             {/* <h4 className="title"><Link to="/portfolio-details">{value.title}</Link></h4> */}
                                         </div>

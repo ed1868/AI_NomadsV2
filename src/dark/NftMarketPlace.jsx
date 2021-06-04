@@ -151,6 +151,8 @@ class NftMarketPlace extends Component {
             this.setState({ loading: false });
             return;
         }
+
+        this.setState({ preview: false })
         // Load account
         const accounts = await web3.eth.getAccounts()
 
@@ -242,7 +244,8 @@ class NftMarketPlace extends Component {
         super()
         this.state = {
             isOpen: false,
-            nft: true
+            nft: true,
+            preview: true
         }
         this.openModal = this.openModal.bind(this)
 
@@ -258,7 +261,8 @@ class NftMarketPlace extends Component {
         // Now send the message throught the backend API
     }
     render() {
-
+        let preview = this.state.preview;
+        console.log('the fucking preview: ', preview)
         return (
             <div className="active-dark bg_color--10">
                 <Helmet pageTitle="Nomad NFT Marketplace" />
@@ -385,25 +389,25 @@ class NftMarketPlace extends Component {
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <p className="theme-gradient text-left">Top Rated</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} previewMode={this.state.preview} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">New Collections</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"} buyNftFromOwner={this.buyNftFromOwner} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"NewCollections"} buyNftFromOwner={this.buyNftFromOwner} previewMode={this.state.preview} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Digital Art</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"topRated"} buyNftFromOwner={this.buyNftFromOwner} previewMode={this.state.preview} />
                         </div>
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 pt-4">
                                 <p className="theme-gradient text-left">Crypto Scriptures</p>
                             </div>
-                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"} buyNftFromOwner={this.buyNftFromOwner} />
+                            <PortfolioNft item="8" column="col-lg-3 col-md-6 col-sm-6 col-12 portfolio-tilthover" nft={this.state.nft} category={"digitalArt"} buyNftFromOwner={this.buyNftFromOwner} previewMode={this.state.preview} />
                         </div>
                         {/* <div className="row">
                             <div className="col-md-12">
