@@ -29,7 +29,7 @@ let emailSender = (emailData) => {
     let text = `
     Hey ${firstName} ,
     
-    Please confirm that you want to use this as your NOMA Token Crypto account email address. Once it’s done, you’ll be on the waitlist!`
+    Please confirm that you want to use this as your NOMA Token Crypto account email address. Once it’s done, you’ll be on the waitlist!`;
 
 
     transporter.sendMail({
@@ -55,85 +55,39 @@ router.get('/', (req, res, next) => {
             console.log("ERROR : ", err);
         }
     });
-
-
-    console.log("PULLING MESSAGES..");
-    Message.find({}).then(payload => {
-        console.log('PULLED MESSAGES : ', payload);
-    }).catch(err => {
-        if (err) {
-            console.log("ERROR : ", err)
-        }
-    })
 })
 
 
 //POST ROUTE THAT WILL BE CALLED WHEN USER SUBMITS CONTACT ME FORM - THIS WILL SAVE USER AUTOMATICALLY TO KEEP TRACK OF USER QUERIES AND USE DATA TO TRAIN AI 
 
 
-router.post('/request', (req, res, next) => {
-    const { name, email, phone, subject, text } = req.body
+router.post('/tokenRequest', (req, res, next) => {
+    const { firstName, email } = req.body
 
     console.log('request body: ', req.body)
-    // const email = "hwek21@gmail.com";
-    // const username = email;
-    // const phone = "7866086021"
-    const password = bcrypt.hashSync('aiNomads', bcrypt.genSaltSync(bcryptSalt));
-    // const subject = "just saying test one";
-    // const text = "please baby dont fuck up my vibe"
 
 
-    User.findOne({ email }).then(user => {
+
+    TokenWaitList.findOne({ email }).then(user => {
         if (user != null) {
-            // res.status(409).json({ message: "User already exist" });
-            // return
-
-
-            User.updateOne(
-                { email: email },
-                { $addToSet: { messages: [{ subject, text }] } },
-                function (err, result) {
-                    if (err) {
-                        res.send(err);
-                    } else {
-                        // res.send(result);
-                        console.log(result);
-                    }
-                }
-            ).then(() => {
-                let emailPayload = {
-                    email, subject, text
-                }
-                emailSender(emailPayload);
-                return res.status(200).json({ message: "did a whole succesfull loop" });
-            }).catch(err => {
-                if (err) {
-                    console.log('TENGO UN ERROR ', err
-                    )
-                }
-            })
-
-
+            res.status(409).json({ message: "User already on waitlist" });
+            return
         } else {
-            const salt = bcrypt.genSaltSync(bcryptSalt)
-            const hashPass = bcrypt.hashSync(password, salt)
-            const newUser = new User({
-                username: name, password: hashPass, phone, email, messages: {
-                    subject, text
 
-                }
+            const newTokenWaitListUser = new TokenWaitList({
+                firstName, email
             });
-            return newUser.save()
+            return newTokenWaitListUser.save()
         }
 
     }).then(userSaved => {
         if (userSaved) {
             console.log("USER SAVED: ", userSaved);
             let newUserEmailPayload = {
-                email, subject, text
+                firstName, email
             }
             emailSender(newUserEmailPayload);
-            res.status(200).json({ message: "did a whole succesfull loop" });
+            res.status(200).json({ message: "EMAIL has been sent to user for confirmation" });
         }
 
     }).catch(err => {
