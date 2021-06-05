@@ -102,6 +102,13 @@ router.post('/tokenRequest', (req, res, next) => {
 });
 
 
+//ROUTE FOR EMAIL CONFIRMATION :
+
+
+router.post('/tokenConfirmation/:id', (req, res, next) => {
+    const tokenCode = req.params;
+    console.log('TOKEN ENTERED BY USER : ', tokenCode);
+})
 
 
 
