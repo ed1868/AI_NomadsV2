@@ -64,9 +64,17 @@ router.get('/', (req, res, next) => {
 router.post('/tokenRequest', (req, res, next) => {
     const { firstName, email } = req.body
 
-    console.log('request body: ', req.body)
+    console.log('request body: ', req.body);
+    let letters = "abcdefghijkmlnopqrstuvwxyz";
+    let upperCase = letters.toUpperCase();
+    const characters = `0123456789${letters}${upperCase}`
+    let token = ''
 
+    for (let i = 0; i < 25; i++) {
+        token += characters[Math.floor(Math.random() * characters.length)];
+    }
 
+    console.log('THE NEW TOKEN : ', token);
 
     TokenWaitList.findOne({ email }).then(user => {
         if (user != null) {
@@ -75,7 +83,7 @@ router.post('/tokenRequest', (req, res, next) => {
         } else {
 
             const newTokenWaitListUser = new TokenWaitList({
-                firstName, email
+                firstName, email, confirmationCode: token
             });
             return newTokenWaitListUser.save()
         }
