@@ -13,7 +13,9 @@ import Team from "../elements/Team";
 import BlogContent from "../elements/blog/BlogContent";
 import BrandTwo from "../elements/BrandTwo";
 import FooterTwo from "../component/footer/FooterTwo";
-import Contact from "../elements/contact/ContactTwo";
+// import Contact from "../elements/contact/ContactTwo";
+import Contact from "../elements/contact/ContactOne";
+// import Contact from "../elements/contact/ContactTwo";
 import Helmet from "../component/common/Helmet";
 import AboutThree from "../component/HomeLayout/homeOne/AboutThree";
 

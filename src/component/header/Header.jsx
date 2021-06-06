@@ -197,7 +197,7 @@ class Header extends Component {
                                     </li> */}
                                     <li><Link to="/about" >About</Link></li>
                                     <li><Link to="/nomadNft" >NFT Store</Link></li>
-                                    <li><Link to="/nomadNft" >NOMA Token</Link></li>
+                                    <li><Link to="/tokenWaitList" >NOMA Token</Link></li>
                                     <li><Link to="/services">Services</Link></li>
                                     {/* <li className="has-droupdown"><Link to="#pages" >Pages</Link>
                                         <ul className="submenu">

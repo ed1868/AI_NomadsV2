@@ -32,7 +32,7 @@ import DarkMainDemo from './dark/MainDemo';
 import DarkPortfolioLanding from './dark/PortfolioLanding';
 import HomePortfolio from './dark/HomePortfolio';
 import NftMarketPlace from './dark/NftMarketPlace';
-
+import TokenWaitList from "./elements/contact/ContactOne";
 
 
 // Element Layout
@@ -77,6 +77,8 @@ class Root extends Component{
                     <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomePortfolio}/>
                     {/* <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={ComingSoon}/> */}
                     <Route exact path={`${process.env.PUBLIC_URL}/nomadNft`} component={NftMarketPlace}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/tokenWaitList`} component={TokenWaitList}/>
+
                     <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
