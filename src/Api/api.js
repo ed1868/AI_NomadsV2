@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const service = axios.create({
-    baseURL: `http://localhost:5000/api/contact`,
+    baseURL: `${process.env.REACT_APP_API_URL}contact`,
     withCredentials: true,
 })
 
