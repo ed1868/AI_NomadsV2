@@ -27,13 +27,13 @@ class ContactOne extends Component {
 
         console.log('TOKEN FORM DATA : ', formData);
 
-        // api.tokenWaitList(formData).then(result => {
-        //     console.log('SUCCESSS NIH : ', result);
-        // }).catch(err => {
-        //     if (err) {
-        //         console.log('ERROR : ', err)
-        //     }
-        // })
+        api.tokenWaitList(formData).then(result => {
+            console.log('SUCCESSS NIH : ', result);
+        }).catch(err => {
+            if (err) {
+                console.log('ERROR : ', err)
+            }
+        })
     }
 
 
