@@ -1,15 +1,44 @@
 import React, { Component } from "react";
+import api from '../../Api/api';
 
-class ContactOne extends Component{
-    constructor(props){
+class ContactOne extends Component {
+    constructor(props) {
         super(props);
         this.state = {
-            rnName: '',
-            rnEmail: '',
+            nomadName: '',
+            nomadEmail: '',
         };
+
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
-    render(){
-        return(
+
+    onFormSubmit(event) {
+
+        event.preventDefault();
+        console.log('ENTRO EN FORM SUBMIT DE TOKENNNN!!! : ', event);
+
+        const formData = {
+
+            firstName: this.state.nomadName,
+            email: this.state.nomadEmail,
+
+
+        }
+
+        console.log('TOKEN FORM DATA : ', formData);
+
+        // api.tokenWaitList(formData).then(result => {
+        //     console.log('SUCCESSS NIH : ', result);
+        // }).catch(err => {
+        //     if (err) {
+        //         console.log('ERROR : ', err)
+        //     }
+        // })
+    }
+
+
+    render() {
+        return (
             <div className="contact-form--1 mt-5">
                 <div className="container">
                     <div className="row row--35 align-items-start">
@@ -29,14 +58,14 @@ class ContactOne extends Component{
                                 </div> */}
                             </div>
                             <div className="form-wrapper">
-                                <form>
+                                <form onSubmit={(event) => { this.onFormSubmit(event) }} >
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
                                             name="name"
                                             id="item01"
-                                            value={this.state.rnName}
-                                            onChange={(e)=>{this.setState({rnName: e.target.value});}}
+                                            value={this.state.nomadName}
+                                            onChange={(e) => { this.setState({ nomadName: e.target.value }); }}
                                             placeholder="Your Name *"
                                         />
                                     </label>
@@ -46,20 +75,20 @@ class ContactOne extends Component{
                                             type="text"
                                             name="email"
                                             id="item02"
-                                            value={this.state.rnEmail}
-                                            onChange={(e)=>{this.setState({rnEmail: e.target.value});}}
+                                            value={this.state.nomadEmail}
+                                            onChange={(e) => { this.setState({ nomadEmail: e.target.value }); }}
                                             placeholder="Your email *"
                                         />
                                     </label>
 
-    
+
                                     <button className="btn-default" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit Now</button>
                                 </form>
                             </div>
                         </div>
                         <div className="col-lg-6 order-1 order-lg-2 mt-5">
                             <div className="thumbnail mb_md--30 mb_sm--30">
-                                <img src="/assets/images/token/ailogos.jpeg" alt="trydo"/>
+                                <img src="/assets/images/token/ailogos.jpeg" alt="trydo" />
                             </div>
                         </div>
                     </div>
