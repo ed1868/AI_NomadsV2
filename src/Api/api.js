@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const service = axios.create({
-    baseURL: `${process.env.REACT_APP_API_URL}contact`,
+    baseURL: `${process.env.REACT_APP_API_URL}`,
     withCredentials: true,
 })
 
@@ -23,7 +23,7 @@ export default {
     sendFlare(requestDetails) {
         console.log('ATTEMPTING TO SEND FLARE TO BACKEND...');
 
-        return service.post('/request', requestDetails).then(response => {
+        return service.post('contact/request', requestDetails).then(response => {
             console.log('SUCCESFULL RESPONSE : ', response);
             if (response.status == 200) {
                 return response.data;
@@ -34,6 +34,24 @@ export default {
         }).catch(errHandler)
 
     },
+
+
+    tokenWaitList(user) {
+
+        console.log('USER IS ATTEMPTING TO GET IN THE WAITLIST FOR NOMA TOKEN :D ');
+
+        return service.post('/tokenWaitList/tokenRequest', user).then(response => {
+            if (response.state == 200) {
+                console.log('SUCCESFULL RESPOMSE : ', response)
+                return response.data;
+            } else {
+                console.log('SHITTY RESPONSE : ', response);
+            }
+
+        }).catch(errHandler);
+
+    }
+
     // // This method is synchronous and returns true or false
     // // To know if the user is connected, we just check if we have a value for localStorage.getItem('user')
     // isLoggedIn() {
