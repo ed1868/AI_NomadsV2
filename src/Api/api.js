@@ -4,6 +4,9 @@ import axios from 'axios'
 
 const service = axios.create({
     baseURL: `${process.env.REACT_APP_API_URL}`,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    }
 })
 
 const errHandler = err => {
