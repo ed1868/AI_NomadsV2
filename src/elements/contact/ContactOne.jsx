@@ -46,10 +46,20 @@ class ContactOne extends Component {
                 <PageHelmet pageTitle='NOMA Token' />
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                {/* Start Breadcrump Area */}
+                <div className="rn-page-title-area pt--120 pb--190 bg_image bg_image--15" data-black-overlay="6">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="rn-page-title text-center pt--100">
+                                    <h2 className="title theme-gradient">NOMA TOKEN</h2>
+                                    <p>A Decentralized Token for all your Daaps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* End Breadcrump Area */}
                 <div className="contact-form--1 mt-5">
                     <div className="container mt-5">
                         <div className="row row--35 align-items-start">
