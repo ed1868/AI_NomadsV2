@@ -47,7 +47,7 @@ class ContactOne extends Component {
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
-                <div className="rn-page-title-area pt--120 pb--190 bg_image bg_image--15" data-black-overlay="6">
+                <div className="rn-page-title-area pt--120 pb--190 bg_image bg_image--16" data-black-overlay="6">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -109,7 +109,7 @@ class ContactOne extends Component {
                             </div>
                             <div className="col-lg-6 order-1 order-lg-2 mt-5">
                                 <div className="thumbnail mb_md--30 mb_sm--30">
-                                    <img src="/assets/images/token/ailogos.jpeg" alt="trydo" />
+                                    <img src="/assets/images/token/criThree.jpeg" alt="trydo" />
                                 </div>
                             </div>
                         </div>
