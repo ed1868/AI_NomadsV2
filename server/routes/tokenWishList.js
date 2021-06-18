@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-let emailSender = (emailData) => {
+let tokenEmailSender = (emailData) => {
 
     let email = emailData.email;
     let firstName = emailData.firstName;
@@ -369,7 +369,8 @@ router.get('/', (req, res, next) => {
 router.post('/tokenRequest', (req, res, next) => {
     const { firstName, email } = req.body
 
-    console.log('request body: ', req.body);
+    console.log('request body: ', req);
+    
     let letters = "abcdefghijkmlnopqrstuvwxyz";
     let upperCase = letters.toUpperCase();
     const characters = `0123456789${letters}${upperCase}`
@@ -399,7 +400,7 @@ router.post('/tokenRequest', (req, res, next) => {
             let newUserEmailPayload = {
                 firstName, email, token
             }
-            emailSender(newUserEmailPayload);
+            tokenEmailSender(newUserEmailPayload);
             res.status(200).json({ message: "EMAIL has been sent to user for confirmation" });
         }
 

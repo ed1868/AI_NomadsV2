@@ -1,6 +1,7 @@
 const express = require('express')
 const passport = require('passport')
 const router = express.Router()
+const bodyParser = require('body-parser');
 const User = require('../models/User')
 const Message = require('../models/Message');
 const { IgnorePlugin } = require('webpack');
@@ -9,10 +10,15 @@ const bcrypt = require('bcrypt')
 const bcryptSalt = 10
 
 const nodemailer = require("nodemailer");
-
+// create application/json parser
+var jsonParser = bodyParser.json()
+ 
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
     service: 'Gmail',
     auth: {
         user: process.env.EMAIL_USER,
@@ -69,9 +75,11 @@ router.get('/', (req, res, next) => {
 
 
 router.post('/request', (req, res, next) => {
-    const { name, email, phone, subject, text } = req.body
+    let body = JSON.parse(JSON.stringify(req.body));
+    const { name, email, phone, subject, text } = body;
 
     console.log('request body: ', req.body)
+    console.log('body: ', body)
     // const email = "hwek21@gmail.com";
     // const username = email;
     // const phone = "7866086021"

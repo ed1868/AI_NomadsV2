@@ -5,7 +5,9 @@ import axios from 'axios'
 const service = axios.create({
     baseURL: `${process.env.REACT_APP_API_URL}`,
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'application/json',
+        dataType: 'json'
     }
 })
 
@@ -25,7 +27,7 @@ export default {
     sendFlare(requestDetails) {
         console.log('ATTEMPTING TO SEND FLARE TO BACKEND...');
 
-        return service.post('contact/request', requestDetails).then(response => {
+        return service.post('/contact/request', requestDetails).then(response => {
             console.log('SUCCESFULL RESPONSE : ', response);
             if (response.status == 200) {
                 return response.data;
@@ -41,11 +43,15 @@ export default {
     tokenWaitList(user) {
 
         console.log('USER IS ATTEMPTING TO GET IN THE WAITLIST FOR NOMA TOKEN :D ');
-
-        return service.post('/tokenWaitList/tokenRequest', user).then(response => {
-            if (response.state == 200) {
+        console.log('THE USER BEING SENT TO THE BACKEND : ', user)
+        let tokenuser = {
+            firstName: user.firstName,
+            email: user.email
+        }
+        return service.post('/tokenWaitList/tokenRequest', tokenuser).then(response => {
+            if (response.status == 200) {
                 console.log('SUCCESFULL RESPOMSE : ', response)
-                return response.data;
+                return response.data.message;
             } else {
                 console.log('SHITTY RESPONSE : ', response);
             }
