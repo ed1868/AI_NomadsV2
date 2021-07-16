@@ -42,7 +42,7 @@ export default {
 
 
 
-    getExchangeData = () => {
+    getExchangeData() {
 
 
         //GET EXCHANGE DATA 
@@ -91,7 +91,7 @@ export default {
     }
     ,
 
-    getCurrencyData = () => {
+    getCurrencyData() {
         //getting ccurencies data
         axios({
             "method": "GET",
@@ -151,7 +151,7 @@ export default {
             })
     },
 
-    getCurrencyMarketData = () => {
+    getCurrencyMarketData() {
 
         //getting ccurrency market data
         axios({
