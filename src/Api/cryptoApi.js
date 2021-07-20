@@ -43,29 +43,22 @@ export default {
 
 
     getExchangeData() {
-
-
         //GET EXCHANGE DATA 
 
         let exchangesIds = ["binance", "coinbase-pro", "gemini"];
-        axios({
-            "method": "GET",
-            "url": `https://coinpaprika1.p.rapidapi.com/exchanges/${exchangesIds[0]}/markets`,
-            "headers": {
-                "content-type": "application/octet-stream",
-                "x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
-                "x-rapidapi-key": "69225c48e9msh6187f24c67061afp1b10f8jsnad7cfe59d33c",
-                "useQueryString": true
-            }
-        }).then((payload) => {
-            console.log(`FIRST PAYLOAD of cup: ${payload}`)
-            return payload;
 
-        }).catch((err) => {
-            if (err) {
-                console.log('WE HAVE AN ERROR ', err);
+
+        return service.get(`/exchanges/${exchangesIds[0]}/markets`).then(response => {
+            console.log('SUCCESFUL RESPONSE: ', response);
+            if (response.status == 200) {
+                return response.data
+            } else {
+                console.log('RESPONSE WAS DIFFERENT : ', response);
             }
+
         })
+            .catch(errHandler)
+
 
     },
 
