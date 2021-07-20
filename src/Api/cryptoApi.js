@@ -24,24 +24,6 @@ const errHandler = err => {
 export default {
     service: service,
 
-    //THIS METHOD SENDS THE CONTACT REQUEST TO THE BACKEND AND RETURNS TRUE IF SUCCESFULL 
-    // sendFlare(requestDetails) {
-    //     console.log('ATTEMPTING TO SEND FLARE TO BACKEND...');
-
-    //     return service.post('/contact/request', requestDetails).then(response => {
-    //         console.log('SUCCESFULL RESPONSE : ', response);
-    //         if (response.status == 200) {
-    //             return response.data;
-    //         }
-    //         else {
-    //             console.log('RESPONSE WAS DIFFERENT : ', response)
-    //         }
-    //     }).catch(errHandler)
-
-    // },
-
-
-
     getExchangeData() {
         //GET EXCHANGE DATA 
 
@@ -60,88 +42,25 @@ export default {
             .catch(errHandler)
 
 
-    },
-
-
-    tokenWaitList(user) {
-
-        console.log('USER IS ATTEMPTING TO GET IN THE WAITLIST FOR NOMA TOKEN :D ');
-        console.log('THE USER BEING SENT TO THE BACKEND : ', user)
-        let tokenuser = {
-            firstName: user.firstName,
-            email: user.email
-        }
-        return service.post('/tokenWaitList/tokenRequest', tokenuser).then(response => {
-            if (response.status == 200) {
-                console.log('SUCCESFULL RESPOMSE : ', response)
-                return response.data.message;
-            } else {
-                console.log('SHITTY RESPONSE : ', response);
-            }
-
-        }).catch(errHandler);
-
     }
     ,
 
     getCurrencyData() {
-        //getting ccurencies data
-        axios({
-            "method": "GET",
-            "url": "https://coinpaprika1.p.rapidapi.com/tickers",
-            "headers": {
-                "content-type": "application/octet-stream",
-                "x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
-                "x-rapidapi-key": "69225c48e9msh6187f24c67061afp1b10f8jsnad7cfe59d33c",
-                "useQueryString": true
-            }
-        })
-            .then((response) => {
-                //assign all ccurencies data from API into variable
-                const coins = response.data
+        //GETTING CURRENCY DATA
 
-                console.log('ALL THE COINS : ', coins)
-                //declare ccurencies and their imgs
-                const ccArray = [
-                    // { name: 'Bitcoin', img: btc },
-                    // { name: 'Ethereum', img: eth },
-                    // { name: 'Chainlink', img: link },
-                    // { name: 'Cardano', img: ada },
-                    // { name: 'Monero', img: xmr },
-                    // { name: 'yearn.finance', img: yfi },
-                    // { name: 'Aave', img: lend },
-                    // { name: 'Compound', img: comp },
-                    // { name: 'Uniswap', img: uni },
-                    // { name: 'Golem', img: gnt }
-                ]
+        return service.get(`/tickers`).then(response => {
+            let coins = response.data;
+            console.log(`ALL THE COINS : ${coins}`);
+            let resultArr = [];
 
-                /* search for chosen cryptocurrencies, then add them to the state */
-                //get ccurency from ccArray 
-
-
-
-                //get ccurrency from API
-                for (let i = 0; i < coins.length; i++) {
-                    //if current ccurrency API == current ccurrency from ccArray
-                    // if (coins[i].name === ccArray[j].name) {
-                    //add img to the ccurrency API data
-                    // coins[i]['img'] = ccArray[j].img
-                    //set state with updated data
-                    // this.setState({
-                    //   ccData: [...this.state.ccData, coins[i]]
-                    this.state.ccData.push(coins[i])
-                    // })
-                    // }
-                }
-
-                //sort ccurrencies by rank
-                this.setState({
-                    ccData: this.state.ccData.sort((a, b) => a.rank - b.rank)
-                })
+            coins.map(coin => {
+                resultArr.push(coin);
             })
-            .catch((error) => {
-                console.log(error)
-            })
+        }).
+            catch(errHandler)
+
+
+
     },
 
     getCurrencyMarketData() {
