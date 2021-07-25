@@ -4,6 +4,9 @@ import PageHelmet from "../../component/common/Helmet";
 import Header from "../../component/header/Header";
 import { useAlert, positions, Provider } from "react-alert";
 
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button'
+
 
 const options = {
     timeout: 5000,
@@ -29,15 +32,16 @@ class ContactOne extends Component {
 
 
     handleClose = () => {
-
+        this.setState({ show: false });
     }
-    handleShow = () => {
 
-    }
     onFormSubmit(event) {
 
         event.preventDefault();
         console.log('ENTRO EN FORM SUBMIT DE TOKENNNN!!! : ', event);
+
+        this.setState({ show: true });
+
 
         const formData = {
 
@@ -216,6 +220,21 @@ class ContactOne extends Component {
 
 
                                         <button className="btn-default" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit Now</button>
+
+                                        <Modal show={this.state.show} onHide={this.handleClose}>
+                                            <Modal.Header closeButton>
+                                                <Modal.Title>Modal heading</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                                            <Modal.Footer>
+                                                <Button variant="secondary" onClick={this.handleClose}>
+                                                    Close
+                                                </Button>
+                                                <Button variant="primary" onClick={this.handleClose}>
+                                                    Save Changes
+                                                </Button>
+                                            </Modal.Footer>
+                                        </Modal>
                                     </form>
                                 </div>
                             </div>
