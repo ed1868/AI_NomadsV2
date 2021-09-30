@@ -36,7 +36,7 @@ const SlideList = [
         textPosition: 'text-center',
         category: '',
         title: 'AI Nomads',
-        description: 'Take Control of your Digital Footprint. Everywhere you go',
+        description: 'Take Control of your Digital Footprintsssss. Everywhere you go',
         buttonText: 'Contact Us',
         buttonLink: '/contact'
     }
