@@ -85,7 +85,6 @@ class Footer extends Component{
                                         <h4>Say Hello</h4>
                                         <ul className="ft-link">
                                             <li>Email: <a href="mailto:ainomadsmiami@gmail.com">ainomadsmiami@gmail.com</a></li>
-                                            <li>Email: <a href="mailto:hr@example.com">hr@example.com</a></li>
                                             <li>Phone: <a href="tel:7866086021">7866086021</a></li>
                                         </ul>
 
