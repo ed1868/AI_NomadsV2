@@ -205,7 +205,7 @@ class HomePortfolio extends Component {
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p className="text-white pt-5">{value.description}</p> : ''}
                                                 {/* {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''} */}
-                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="/contact">Contact Us</a></div> : ''}
+                                                {value.buttonText ? <div className="slide-btn"><a className="btn-default btn-large" href="#blockchainTrust">Explore</a></div> : ''}
                                             </div>
                                         </div>
                                     </div>
@@ -264,7 +264,7 @@ class HomePortfolio extends Component {
                 {/* End Slider Area   */}
 
                 {/* Start portfolio Area  */}
-                <div className="rn-portfolio-area bg_color--10 ptb--120">
+                <div id="blockchainTrust" className="rn-portfolio-area bg_color--10 ptb--120">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
